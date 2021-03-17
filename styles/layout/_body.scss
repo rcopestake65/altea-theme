@@ -1,11 +1,14 @@
-@use '../abstracts' as ab;
-@use '../base';
+@use '../abstracts' as *;
+@use '../base' as *;
 
+/*
+//////////////////////////////BODY\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
 body {
-  font-family: base.$font-stack;
-  background: ab.$white;
-  color: ab.$gray;
-  font-size: base.$font-size-base;
+  font-family: $font-stack;
+  background: $white;
+  color: $gray;
+  font-size: $font-size-base;
   line-height: 1.5;
   padding: 14px;
 }

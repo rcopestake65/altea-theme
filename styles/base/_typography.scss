@@ -1,7 +1,7 @@
-$font-stack: "Source Sans Pro", sans-serif;
-$font-headings: "Trebuchet MS", sans-serif;
-$font-size-base: 1rem;
-
+@use '../abstracts' as *;
+/*
+//////////////////////TYPOGRAPHY\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
 a {
   color: #2988db;
   text-decoration: none;
