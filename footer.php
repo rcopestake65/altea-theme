@@ -1,6 +1,6 @@
 <?php wp_footer();?>
 <footer>
-    <div class="container footer-container">
+    <div class="footer-container">
         <p>&copy; <script type="text/javascript">
             document.write(new Date().getFullYear());
             </script> - Company Name</p>

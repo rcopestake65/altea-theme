@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <link rel="canonical" href="#" />
-    <title>Red Ink Theme</title>
+    <title>Altea</title>
 </head>
 
 <body <?php body_class();?>>
@@ -21,19 +21,12 @@
                 <i class="fas fa-bars fa-2x"></i>
             </div>
 
-            <h1 class="hidden"></h1>
-
-            <div class="social-menu">
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
-                </ul>
-            </div>
+            <h1 class="hidden">Altea</h1>
+            <h2 class="hidden">Aircraft | inside &amp; out</h2>
 
             <nav class="main-nav">
                 <a href="/" title="home" class="navbar-item">
-                    <img src="http://www.redink-sandbox.co.uk/28/wp-content/uploads/logo.png" alt="Logo" class="logo">
+                    <img src="" alt="Logo" class="logo">
                 </a>
 
                 <?php

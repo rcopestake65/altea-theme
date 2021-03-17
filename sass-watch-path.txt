@@ -1,1 +1,2 @@
-sass --watch styles:public/css
+// adding styles to styles folder
+sass --watch styles:styles
