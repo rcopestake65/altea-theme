@@ -1,0 +1,11 @@
+@use '../abstracts' as ab;
+@use '../base';
+
+body {
+  font-family: base.$font-stack;
+  background: ab.$white;
+  color: ab.$gray;
+  font-size: base.$font-size-base;
+  line-height: 1.5;
+  padding: 14px;
+}

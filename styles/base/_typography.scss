@@ -1,0 +1,38 @@
+$font-stack: "Source Sans Pro", sans-serif;
+$font-headings: "Trebuchet MS", sans-serif;
+$font-size-base: 1rem;
+
+a {
+  color: #2988db;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+}
+
+a:hover {
+  color: #ccb404;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: $font-headings;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: $font-headings;
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: $font-headings;
+}
+h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: $font-headings;
+}

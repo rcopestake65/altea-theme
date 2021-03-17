@@ -1,0 +1,151 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*height: 60px;*/
+  padding: 0 0 20px 0;
+}
+
+.main-nav ul {
+  display: flex;
+}
+
+.main-nav ul li {
+  padding: 0 10px;
+}
+
+.main-nav ul li a {
+  padding-bottom: 2px;
+  font-weight: 600;
+  color: rgba(61, 61, 61, 0.6);
+  transition: all 0.1s ease-in-out;
+}
+
+.main-nav ul li a:hover {
+  color: #ccb404;
+}
+
+/* .main-nav ul li a.active {
+   
+  } */
+[aria-current]:not([aria-current="false"]) {
+  color: #ccb404;
+}
+
+.main-nav ul.menu {
+  flex: 1;
+  justify-content: flex-end;
+  /*margin-left: 20px;*/
+}
+
+.menu-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 5%;
+  z-index: 2;
+  display: none;
+  text-align: center;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: #262626;
+  color: #fff;
+  font-size: 15px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.dark {
+  color: #fff;
+}
+
+.dark .btn {
+  background: #f4f4f4;
+  color: #333;
+}
+.menu-close-btn {
+  display: none;
+}
+.show {
+  display: block;
+  margin: 0 0 0 50px;
+  justify-self: center;
+  align-self: center;
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 30px;
+}
+
+@media (max-width: 1190px) {
+  .menu-btn {
+    display: block;
+  }
+  .menu-btn p {
+    color: #000;
+  }
+  .fa-bars::before {
+    color: #000;
+  }
+  .menu-btn:hover {
+    opacity: 0.8;
+  }
+  .main-nav ul.right-menu {
+    margin-right: 50px;
+  }
+  .main-nav ul.menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 90%;
+    height: 100%;
+    /*! border-right: 1px solid #ccc; */
+    padding: 30px;
+    transform: translateX(-1100px);
+    transition: transform 0.5s ease-in-out;
+    z-index: 10;
+  }
+  .main-nav ul.menu li {
+    padding: 10px;
+    border-bottom: 1px solid #efeaea;
+  }
+  .main-nav ul.menu li:last-child {
+    border-bottom: 0;
+  }
+  .main-nav ul.menu.show {
+    transform: translateX(-20px);
+  }
+}
+/*full width main nav*/
+
+.container-full-width {
+  width: 95%;
+  margin: auto;
+}
+
+@media (min-width: 1190px) {
+  .container-full-width {
+    width: 100%;
+    margin: auto;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 0 20px;
+    -webkit-box-shadow: 0 3px 6px -6px black;
+    -moz-box-shadow: 0 3px 6px -6px black;
+    box-shadow: 0 3px 6px -6px black;
+    z-index: 10;
+  }
+}

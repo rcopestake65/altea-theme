@@ -1,0 +1,40 @@
+ /*social icons in header*/
+  
+ .social-menu {
+    display: flex;
+    padding-top: 10px;
+  }
+  
+  .social-menu ul {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  
+  @media (max-width: 1190px) {
+    .social-menu ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .menu-close-btn{
+      display: block;
+      cursor: pointer;
+    }
+  }
+  
+  .social-menu ul li:first-of-type {
+    padding-right: 20px;
+  }
+  
+  .social-menu a {
+    color: #000;
+  }
+  
+  .fab {
+    transition: all .1s ease-in-out;
+  }
+  
+  .fab:hover {
+    color: #ccb404;
+  }

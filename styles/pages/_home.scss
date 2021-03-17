@@ -1,0 +1,20 @@
+.home h3{
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+  }
+  .logo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  @media(max-width: 800px)
+{
+  .logo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}  .logo-grid img {
+    max-width: 80%;
+  }

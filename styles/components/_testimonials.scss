@@ -1,0 +1,16 @@
+.testimonial {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #f5f5f5;
+    position: relative;
+  }
+  
+  .quotes {
+    position: absolute;
+    top: -20px;
+    left: 45%;
+  }
+  
+  .testimonial p:last-of-type {
+    margin-bottom: 0;
+  }
