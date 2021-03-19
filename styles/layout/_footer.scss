@@ -1,22 +1,76 @@
+@use '../abstracts' as *;
 /*
 ///////////////////////////FOOTER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
 footer {
-  background: #000;
-  color: #fff;
+  background: $blackcurrant;
+  color: $white;
   padding-top: 10px;
   margin-top: 50px;
 }
 
 .footer-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-}
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1000px;
+  padding: 10px 30px;
+  margin: 0 auto;
+  position: relative;
 
+  ul,
+  li {
+    padding: 0;
+    margin: 0;
+  }
+}
+footer {
+  .custom-menu-class {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: center;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    transition: none;
+    z-index: 10;
+
+    ul {
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    ul li {
+      padding: 0 10px;
+    }
+
+    a {
+      padding-bottom: 0;
+      font-weight: normal;
+      color: $white;
+      transition: none;
+      font-size: 0.8rem;
+      padding-right: 5px;
+    }
+    a:hover {
+      color: $copper;
+    }
+    li::after {
+      content: "";
+      font-size: 1rem;
+      color: $white;
+    }
+  }
+}
 footer .footer-social-menu {
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
   list-style-type: none;
 }
 
@@ -25,9 +79,5 @@ footer .footer-social-menu {
 }
 
 .footer-social-menu a:hover {
-  color: #ccb404;
-}
-
-.footer-social-menu li:first-of-type {
-  padding-right: 10px;
+  color: $copper;
 }

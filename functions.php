@@ -40,10 +40,16 @@ function add_slug_body_class( $classes ) {
 add_filter( 'body_class', 'add_slug_body_class' );
 
 //init menu
-function wpb_custom_new_menu() {
-    register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
+function wpb_custom_main_menu() {
+    register_nav_menu('main-menu',__( 'Main Menu' ));
   }
-  add_action( 'init', 'wpb_custom_new_menu' );
+  add_action( 'init', 'wpb_custom_main_menu' );
+
+  //init menu
+function wpb_custom_footer_menu() {
+  register_nav_menu('footer-menu',__( 'Footer menu' ));
+}
+add_action( 'init', 'wpb_custom_footer_menu' );
 
 //ad close btn to mobile menu  
   function add_last_nav_item($items) {

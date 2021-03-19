@@ -1,17 +1,15 @@
- 
-  .form-container {
+.form-container {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
     grid-gap: 10px;
-  }
-  .thanks-message{
+}
+.thanks-message {
     display: none;
     margin-top: 0 0 0 50px;
-  
-  }
-  .thanks-message-show{
+}
+.thanks-message-show {
     display: block;
     display: block;
     margin: 0 0 0 50px;
@@ -21,78 +19,77 @@
     text-align: center;
     border: 1px solid #ccc;
     padding: 30px;
-  
-  }
-  @media (max-width: 850px) {
+}
+@media (max-width: 850px) {
     .form-container {
-      grid-template-columns: 200px 1fr;
+        grid-template-columns: 200px 1fr;
     }
-  }
-  
-  @media (max-width: 700px) {
+}
+
+@media (max-width: 700px) {
     .form-container {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
     .form-container .image-item {
-      order: 1;
+        order: 1;
     }
-  }
-  .form-item{
+}
+.form-item {
     padding-left: 50px;
     padding-bottom: 2rem;
-  }
-  @media(max-width: 700px){
-    .form-item{
-      padding-left: 0;
+}
+@media (max-width: 700px) {
+    .form-item {
+        padding-left: 0;
     }
-  }
-  .form-control{
+}
+.form-control {
     position: relative;
-  }
-  .form-item i{
+}
+.form-item i {
     position: absolute;
     top: 40px;
     right: 10px;
     visibility: hidden;
-  }
-  .form-control small{
+}
+.form-control small {
     margin-bottom: 1rem;
     display: inline-block;
     visibility: hidden;
-  }
-  .form-control.error small{
+}
+.form-control.error small {
     visibility: visible;
     color: #e74c3c;
-  }
-  .email-btn {
+}
+.email-btn {
     background-color: #000;
     border-radius: 8px;
     text-align: center;
-  }
-  .form-item p{
+}
+.form-item p {
     color: #000;
     font-size: 1.5rem;
     margin-top: 2rem;
-  }
-  .email-btn:hover{
+}
+.email-btn:hover {
     background-color: #999;
-  }
-  .email-btn a{
+}
+.email-btn a {
     color: #fff;
     display: block;
     padding: 20px;
-    transition: all .3s ease-in-out;
-  }
-  .email-btn a:hover{
+    transition: all 0.3s ease-in-out;
+}
+.email-btn a:hover {
     color: #000;
-  }
-  
-  form {
+}
+
+form {
     max-width: 100%;
     margin: 0;
-  }
-  
-  .feedback-input {
+}
+
+.feedback-input {
     font-weight: 500;
     font-size: 18px;
     border-radius: 5px;
@@ -106,40 +103,40 @@
     box-sizing: border-box;
     outline: 0;
     background: #eee;
-  }
-  
-  .feedback-input:focus {
+}
+
+.feedback-input:focus {
     border: 2px solid #666;
-  }
-  .form-control.success input{
+}
+.form-control.success input {
     border-color: #23cc71;
-  }
-  .form-control.error input{
+}
+.form-control.error input {
     border-color: #e74c3c;
-  }
-  .form-control.success textarea{
+}
+.form-control.success textarea {
     border-color: #23cc71;
-  }
-  .form-control.error textarea{
+}
+.form-control.error textarea {
     border-color: #e74c3c;
-  }
-  .form-control.success i.fa-check-circle{
+}
+.form-control.success i.fa-check-circle {
     color: #23cc71;
     visibility: visible;
-  }
-  .form-control.error i.fa-exclamation-circle{
+}
+.form-control.error i.fa-exclamation-circle {
     color: #e74c3c;
     visibility: visible;
-  }
-  textarea {
+}
+textarea {
     height: 150px;
     line-height: 150%;
     resize: vertical;
     font-family: inherit;
-  }
-  
-  [type="submit"] {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+[type="submit"] {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     width: 100%;
     background: #999;
     border-radius: 5px;
@@ -152,8 +149,8 @@
     transition: all 0.3s;
     margin-top: -4px;
     font-weight: 700;
-  }
-  
-  [type="submit"]:hover {
+}
+
+[type="submit"]:hover {
     background: #ccb404;
-  }
+}

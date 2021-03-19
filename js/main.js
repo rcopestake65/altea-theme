@@ -3,12 +3,27 @@
 document
   .querySelector(".menu-btn")
   .addEventListener("click", () =>
-    document.querySelector(".menu").classList.toggle("show")
+    document.querySelector(".custom-menu-class").classList.toggle("menu-show")
+  );
+document
+  .querySelector(".menu-btn")
+  .addEventListener("click", () =>
+    document.querySelector(".mask").classList.toggle("is-active")
   );
 document
   .querySelector(".menu-close-btn")
   .addEventListener("click", () =>
-    document.querySelector(".menu").classList.toggle("show")
+    document.querySelector(".menu").classList.toggle("menu-show")
+  );
+document
+  .querySelector(".mask")
+  .addEventListener("click", () =>
+    document.querySelector(".custom-menu-class").classList.remove("menu-show")
+  );
+document
+  .querySelector(".mask")
+  .addEventListener("click", () =>
+    document.querySelector(".mask").classList.toggle("is-active")
   );
 
 //---------------------------------CONTACT FORM-------------------------------------

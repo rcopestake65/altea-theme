@@ -13,28 +13,38 @@
 
 
 
-    <div class="container-full-width">
-        <header>
 
-            <div class="menu-btn">
-                <p>Menu</p>
-                <i class="fas fa-bars fa-2x"></i>
-            </div>
+    <header>
+        <div class="container">
+
 
             <h1 class="hidden">Altea</h1>
             <h2 class="hidden">Aircraft | inside &amp; out</h2>
 
-            <nav class="main-nav">
-                <a href="/" title="home" class="navbar-item">
-                    <img src="" alt="Logo" class="logo">
+            <nav>
+                <a href="/altea_web_project/" title="home" class="navbar-item">
+                    <?php
+                $image_attributes = wp_get_attachment_image_src( 41, 'full' );
+if ( $image_attributes ) : ?>
+                    <img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>"
+                        height="<?php echo $image_attributes[2]; ?>" />
+                    <?php endif; ?>
+
                 </a>
 
                 <?php
 wp_nav_menu( array( 
-    'theme_location' => 'my-custom-menu', 
+    'theme_location' => 'main-menu', 
     'container_class' => 'custom-menu-class' ) ); 
 ?>
-
+                <div class="menu-btn">
+                    <div class="menu-bar"></div>
+                    <div class="menu-bar"></div>
+                    <div class="menu-bar"></div>
+                    <!-- <i class="fas fa-bars fa-2x"></i> -->
+                </div>
             </nav>
-        </header>
-    </div>
+        </div>
+        <!--container-->
+    </header>
+    <div class="mask"></div>

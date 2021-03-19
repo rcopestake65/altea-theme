@@ -4,15 +4,15 @@
 @use 'base/typography';
 
 @use 'layout/body';
+@use 'layout/container';
 @use 'layout/header';
 @use 'layout/navigation';
-@use 'layout/footer';
-@use 'layout/forms';
 @use 'layout/hero';
-@use 'layout/container';
+@use 'layout/footer';
 
 @use 'pages/home';
 @use 'pages/about';
+@use 'pages/contact';
 
 @use 'components/buttons';
 @use 'components/testimonials';

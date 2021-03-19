@@ -8,17 +8,8 @@ if( have_posts() ) :
 
 <section>
 
-    <div class="hero-image">
-
-
-    </div>
-
-    <div class="container home">
-        <h2><?php the_title(); ?></h2>
-
+    <div class="home">
         <?php the_content(); ?>
-
-
     </div>
 
 </section>
@@ -26,4 +17,5 @@ if( have_posts() ) :
 <?php endwhile;
     endif;
     ?>
+
 <?php get_footer();?>
