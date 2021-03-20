@@ -6,11 +6,11 @@ if( have_posts() ) :
     while ( have_posts() ) :
         the_post(); ?>
 
-<section>
+<section class="home">
 
-    <div class="home">
-        <?php the_content(); ?>
-    </div>
+
+    <?php the_content(); ?>
+
 
 </section>
 
