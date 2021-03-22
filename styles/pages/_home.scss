@@ -12,23 +12,32 @@
 
 .cta-assets {
   background: $gunmetal;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  transition: 0.3s;
   &:hover {
     background: $gunmetal-hover;
-    transition: 0.3;
+    transform: scale(1.05);
   }
 }
 .cta-design {
   background: $copper;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  transition: 0.3s;
   &:hover {
     background: $copper-hover;
-    transition: 0.3;
+    transform: scale(1.05);
   }
 }
 .cta-finance {
   background: $teal;
+  animation-name: fadeIn;
+  animation-duration: 1.9s;
+  transition: 0.3s;
   &:hover {
     background: $teal-hover;
-    transition: 0.3;
+    transform: scale(1.05);
   }
 }
 /*overwriting the kadence info box disply settings to spread out the h2 and p at the top and bottom of the container*/

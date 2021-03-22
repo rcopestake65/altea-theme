@@ -82,11 +82,52 @@ select {
   display: none;
 }
 
+/*keyframes*/
+@keyframes fadeFromTop {
+  0% {
+    top: -20%;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+/*keyframes*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*spacing*/
+.mt1 {
+  margin-top: 1em !important;
+}
+
+.pt1 {
+  padding-top: 1em !important;
+}
+
+.pt2 {
+  padding-top: 2em !important;
+}
+
+.pr1 {
+  padding-right: 1em !important;
+}
+
 /*
 //////////////////////TYPOGRAPHY\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
+p {
+  margin-bottom: 1rem;
+}
+
 a {
-  color: #2988db;
+  color: #1897e9;
   text-decoration: none;
   transition: all 0.1s ease-in-out;
 }
@@ -115,6 +156,7 @@ h3 {
   font-size: 1.25rem;
   font-weight: bold;
   font-family: "Trebuchet MS", sans-serif;
+  margin-bottom: 1rem;
 }
 
 h4 {
@@ -123,13 +165,24 @@ h4 {
   font-family: "Trebuchet MS", sans-serif;
 }
 
+h4.biog-link {
+  font-size: 1.1rem;
+}
+h4.biog-link a:hover {
+  color: white;
+}
+
+.assets h3 {
+  color: white;
+}
+
 /*
 //////////////////////////////BODY\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
 body {
   font-family: "Source Sans Pro", sans-serif;
   background: white;
-  color: #898989;
+  color: #282828;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -174,6 +227,35 @@ header {
   padding: 15px;
 }
 
+/*hero images - the caption position is altered for large screen only*/
+.hero {
+  position: relative;
+}
+@media (min-width: 800px) {
+  .hero .metaslider .caption-wrap {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    background: transparent;
+    color: #000;
+    opacity: 0.7;
+    margin: 0;
+    display: block;
+    width: 50%;
+    line-height: 1.4em;
+  }
+  .hero h2 {
+    font-size: 3.25rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+  }
+  .hero .metaslider .flexslider .slides p {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+}
+
 /*
 ///////////////////////////NAVIGATION\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
@@ -187,29 +269,18 @@ nav {
   color: #e44c10;
 }
 
-.menu-btn {
-  cursor: pointer;
-  z-index: 2;
-  text-align: center;
-}
-
-.btn {
-  cursor: pointer;
-  display: inline-block;
-  border: 0;
-  font-weight: bold;
-  padding: 10px 20px;
-  background: #262626;
-  color: #fff;
-  font-size: 15px;
-}
-
 .menu-close-btn {
   display: none;
 }
 
 .menu-btn {
+  cursor: pointer;
+  z-index: 2;
+  text-align: center;
   display: block;
+  animation-name: fadeFromTop;
+  animation-duration: 1s;
+  position: relative;
 }
 
 .menu-btn p {
@@ -223,10 +294,6 @@ nav {
   clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
   margin-bottom: 4px;
   transition: all 0.2s ease-in-out;
-}
-
-.fa-bars::before {
-  color: white;
 }
 
 .menu-btn:hover > .menu-bar {
@@ -329,7 +396,6 @@ footer {
   background: #201a28;
   color: white;
   padding-top: 10px;
-  margin-top: 50px;
 }
 
 .footer-container {
@@ -347,6 +413,9 @@ footer {
 .footer-container li {
   padding: 0;
   margin: 0;
+}
+.footer-container p {
+  margin-bottom: 0;
 }
 
 footer .custom-menu-class {
@@ -410,26 +479,35 @@ footer .footer-social-menu {
 }
 .cta-assets {
   background: #767171;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  transition: 0.3s;
 }
 .cta-assets:hover {
   background: rgba(118, 113, 113, 0.8);
-  transition: 0.3;
+  transform: scale(1.05);
 }
 
 .cta-design {
   background: #e44c10;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  transition: 0.3s;
 }
 .cta-design:hover {
   background: rgba(228, 76, 16, 0.8);
-  transition: 0.3;
+  transform: scale(1.05);
 }
 
 .cta-finance {
   background: #1b616b;
+  animation-name: fadeIn;
+  animation-duration: 1.9s;
+  transition: 0.3s;
 }
 .cta-finance:hover {
   background: rgba(27, 97, 107, 0.8);
-  transition: 0.3;
+  transform: scale(1.05);
 }
 
 /*overwriting the kadence info box disply settings to spread out the h2 and p at the top and bottom of the container*/
@@ -460,6 +538,15 @@ footer .footer-social-menu {
 .strapline-two p {
     margin-top: 10px;
     padding: 10px;
+  }
+}
+.assets-container .container {
+  padding-top: 2em;
+}
+
+@media (min-width: 800px) {
+  .biog-img {
+    float: right;
   }
 }
 .form-container {
@@ -638,6 +725,50 @@ textarea {
   background: #ccb404;
 }
 
+/*////////////////BUTTONS\\\\\\\\\\\\\\\\\\\\*/
+.btn-skew {
+  clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+  margin-bottom: 0.5em;
+  transition: all 0.1s ease-in;
+}
+.btn-skew:hover {
+  transform: scale(1.02);
+}
+.btn-skew .wp-block-button__link {
+  text-align: left;
+  padding: 3px 10px;
+  transition: 0.3s;
+}
+
+.copper .wp-block-button__link {
+  background-color: #e44c10;
+}
+.copper .wp-block-button__link:hover {
+  background-color: rgba(228, 76, 16, 0.8);
+}
+
+.gunmetal .wp-block-button__link {
+  background-color: #767171;
+}
+.gunmetal .wp-block-button__link:hover {
+  background-color: rgba(118, 113, 113, 0.8);
+}
+
+.teal .wp-block-button__link {
+  background-color: #1b616b;
+}
+.teal .wp-block-button__link:hover {
+  background-color: rgba(27, 97, 107, 0.8);
+}
+
+.white .wp-block-button__link {
+  background-color: white;
+  color: #1897e9 !important;
+}
+.white .wp-block-button__link:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .testimonial {
   margin-top: 50px;
   padding: 30px;
@@ -654,5 +785,7 @@ textarea {
 .testimonial p:last-of-type {
   margin-bottom: 0;
 }
+
+/*//////////////////////LOGO\\\\\\\\\\\\\\\\\\\\\\\*/
 
 /*# sourceMappingURL=styles.css.map */

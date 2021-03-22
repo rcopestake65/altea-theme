@@ -5,3 +5,38 @@
 .hidden {
     display: none;
 }
+
+/*keyframes*/
+@keyframes fadeFromTop {
+    0% {
+        top: -20%;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/*keyframes*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/*spacing*/
+.mt1 {
+    margin-top: 1em !important;
+}
+.pt1 {
+    padding-top: 1em !important;
+}
+.pt2 {
+    padding-top: 2em !important;
+}
+.pr1 {
+    padding-right: 1em !important;
+}

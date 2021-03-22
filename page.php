@@ -8,10 +8,8 @@ if( have_posts() ) :
 
 <section>
 
-    <div class="container page">
-        <!--<h2><//?php the_title(); ?></h2>-->
-        <?php the_content(); ?>
-    </div>
+    <?php the_content(); ?>
+
     <?php endwhile; endif; ?>
 
 </section>

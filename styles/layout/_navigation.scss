@@ -16,30 +16,34 @@ nav {
 // .main-nav ul.menu {
 // }
 
-.menu-btn {
-  cursor: pointer;
-  z-index: 2;
-  text-align: center;
-}
-
-.btn {
-  cursor: pointer;
-  display: inline-block;
-  border: 0;
-  font-weight: bold;
-  padding: 10px 20px;
-  background: #262626;
-  color: #fff;
-  font-size: 15px;
-}
+// .btn {
+//   cursor: pointer;
+//   display: inline-block;
+//   border: 0;
+//   font-weight: bold;
+//   padding: 10px 20px;
+//   background: #262626;
+//   color: #fff;
+//   font-size: 15px;
+// }
 
 .menu-close-btn {
   display: none;
 }
 
 .menu-btn {
-  display: block;
 }
+
+.menu-btn {
+  cursor: pointer;
+  z-index: 2;
+  text-align: center;
+  display: block;
+  animation-name: fadeFromTop;
+  animation-duration: 1s;
+  position: relative;
+}
+
 .menu-btn p {
   color: #000;
 }
@@ -52,9 +56,9 @@ nav {
   margin-bottom: 4px;
   transition: all 0.2s ease-in-out;
 }
-.fa-bars::before {
-  color: $white;
-}
+// .fa-bars::before {
+//   color: $white;
+// }
 .menu-btn:hover > .menu-bar {
   background-color: $copper;
 }

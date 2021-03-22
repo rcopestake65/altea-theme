@@ -2,8 +2,11 @@
 /*
 //////////////////////TYPOGRAPHY\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
+p {
+  margin-bottom: 1rem;
+}
 a {
-  color: #2988db;
+  color: $blue;
   text-decoration: none;
   transition: all 0.1s ease-in-out;
 }
@@ -30,9 +33,20 @@ h3 {
   font-size: 1.25rem;
   font-weight: bold;
   font-family: $font-headings;
+  margin-bottom: 1rem;
 }
 h4 {
   font-size: 1rem;
   font-weight: bold;
   font-family: $font-headings;
+}
+h4.biog-link {
+  font-size: 1.1rem;
+  a:hover {
+    color: $white;
+  }
+}
+
+.assets h3 {
+  color: $white;
 }

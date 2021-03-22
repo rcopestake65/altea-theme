@@ -1,0 +1,52 @@
+@use '../abstracts/' as *;
+/*////////////////BUTTONS\\\\\\\\\\\\\\\\\\\\*/
+
+.btn-skew {
+    clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+    margin-bottom: 0.5em;
+    transition: all 0.1s ease-in;
+    &:hover {
+        transform: scale(1.02);
+    }
+    .wp-block-button__link {
+        text-align: left;
+        padding: 3px 10px;
+        transition: 0.3s;
+    }
+}
+.copper {
+    .wp-block-button__link {
+        background-color: $copper;
+        &:hover {
+            background-color: $copper-hover;
+        }
+    }
+}
+
+.gunmetal {
+    .wp-block-button__link {
+        background-color: $gunmetal;
+        &:hover {
+            background-color: $gunmetal-hover;
+        }
+    }
+}
+
+.teal {
+    .wp-block-button__link {
+        background-color: $teal;
+        &:hover {
+            background-color: $teal-hover;
+        }
+    }
+}
+
+.white {
+    .wp-block-button__link {
+        background-color: $white;
+        color: $blue !important;
+        &:hover {
+            background-color: $white-hover;
+        }
+    }
+}

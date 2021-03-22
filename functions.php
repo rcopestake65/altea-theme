@@ -56,3 +56,5 @@ add_action( 'init', 'wpb_custom_footer_menu' );
     return $items .= '<li class="menu-close-btn"><i class="far fa-times-circle fa-2x"></i></li>';
   }
   add_filter('wp_nav_menu_items','add_last_nav_item');
+
+?>
