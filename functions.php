@@ -57,4 +57,10 @@ add_action( 'init', 'wpb_custom_footer_menu' );
   }
   add_filter('wp_nav_menu_items','add_last_nav_item');
 
+//add featured image to posts admin
+
+function altea_theme_support(){
+  add_theme_support('post-thumbnails');
+}
+add_action ('after_setup_theme', 'altea_theme_support');
 ?>
