@@ -131,7 +131,7 @@ nav {
   left: 0;
   width: 0;
   height: 0;
-  background-color: #000;
+  background-color: $blackcurrant;
   opacity: 0;
   -webkit-transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
   transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
@@ -140,7 +140,7 @@ nav {
 .mask.is-active {
   width: 100%;
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.6;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
