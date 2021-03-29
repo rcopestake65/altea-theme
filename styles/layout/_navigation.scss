@@ -27,52 +27,114 @@ nav {
 //   font-size: 15px;
 // }
 
-.menu-close-btn {
+/*//////////////////Hamburger with animation to Close btn\\\\\\\\\\\\\\\\\\\\\\\\\*/
+label.menu-btn {
+  position: absolute;
+  right: 0;
+  background-color: $white;
+  height: 7px;
+  width: 40px;
+  // clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+  margin-bottom: 4px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  &::before,
+  &::after {
+    content: "";
+    height: 7px;
+    width: 40px;
+    background-color: $white;
+    position: absolute;
+    display: block;
+    transition: all 0.6s cubic-bezier(1, 0, 0, 1);
+  }
+  &::before {
+    top: -14px;
+    left: 0;
+    transform-origin: left top;
+    transform: rotateZ(0deg);
+  }
+  &::after {
+    bottom: -14px;
+    left: 0;
+    transform-origin: left bottom;
+    transform: rotateZ(0deg);
+  }
+}
+label.menu-btn:hover {
+  background-color: $copper;
+  &::before {
+    background-color: $copper;
+  }
+  &::after {
+    background-color: $copper;
+  }
+}
+#toggle:checked ~ label::before {
+  background-color: $copper;
+  transform: rotateZ(50deg);
+}
+#toggle:checked ~ label::after {
+  background-color: $copper;
+  transform: rotateZ(-50deg);
+}
+#toggle:checked ~ label {
+  background-color: $blackcurrant;
+}
+#toggle ~ label {
+  transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+}
+input.menu-chkbox {
   display: none;
 }
-
-.menu-btn {
-}
-
-.menu-btn {
+.menu-btn-container {
   cursor: pointer;
-  z-index: 2;
-  text-align: center;
-  display: block;
-  animation-name: fadeFromTop;
-  animation-duration: 1s;
-  position: relative;
 }
+/*end of hamburger animation*/
+
+// .menu-close-btn {
+//   display: none;
+// }
+
+// .menu-btn {
+//   cursor: pointer;
+//   z-index: 2;
+//   text-align: center;
+//   display: block;
+//   animation-name: fadeFromTop;
+//   animation-duration: 1s;
+//   position: relative;
+// }
 
 .menu-btn p {
   color: #000;
 }
 
-.menu-bar {
-  background-color: white;
-  height: 7px;
-  width: 40px;
-  clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
-  margin-bottom: 4px;
-  transition: all 0.2s ease-in-out;
-}
+// .menu-bar {
+//   background-color: white;
+//   height: 7px;
+//   width: 40px;
+//   clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+//   margin-bottom: 4px;
+//   transition: all 0.2s ease-in-out;
+// }
 // .fa-bars::before {
 //   color: $white;
 // }
-.menu-btn:hover > .menu-bar {
-  background-color: $copper;
-}
+// .menu-btn:hover,
+// . {
+//   background-color: $copper;
+// }
 .custom-menu-class {
   display: none;
   flex-direction: column;
   position: absolute;
-  text-align: center;
+  // text-align: center;
   top: 100px;
   right: 10%;
-  width: 30%;
+  width: 25%;
   height: 100%;
   opacity: 0;
-
   @media (max-width: $br-small) {
     width: 100%;
     right: 0;
@@ -80,7 +142,7 @@ nav {
   }
   ul {
     background-color: $blackcurrant;
-    padding: 20px 0;
+    padding: 10px 0 10px 20px;
     // border: 1px solid $gray;
   }
 
@@ -125,22 +187,22 @@ nav {
 /*Footer menu*/
 
 /*mask*/
-.mask {
-  z-index: 100;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  background-color: $blackcurrant;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
-  transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
-  position: fixed;
-}
-.mask.is-active {
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
+// .mask {
+//   z-index: 100;
+//   top: 0;
+//   left: 0;
+//   width: 0;
+//   height: 0;
+//   background-color: $blackcurrant;
+//   opacity: 0;
+//   -webkit-transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
+//   transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
+//   position: fixed;
+// }
+// .mask.is-active {
+//   width: 100%;
+//   height: 100%;
+//   opacity: 0.6;
+//   -webkit-transition: opacity 0.3s;
+//   transition: opacity 0.3s;
+// }

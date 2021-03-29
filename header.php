@@ -24,7 +24,7 @@
             <nav>
                 <div class="logo"> <a href="/altea_web_project/" title="home" class="navbar-item">
                         <?php
-                $image_attributes = wp_get_attachment_image_src( 41, 'full' );
+                $image_attributes = wp_get_attachment_image_src( 378, 'full' );
 if ( $image_attributes ) : ?>
                         <img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>"
                             height="<?php echo $image_attributes[2]; ?>" />
@@ -38,14 +38,20 @@ wp_nav_menu( array(
     'theme_location' => 'main-menu', 
     'container_class' => 'custom-menu-class' ) ); 
 ?>
-                <div class="menu-btn">
-                    <div class="menu-bar"></div>
-                    <div class="menu-bar"></div>
-                    <div class="menu-bar"></div>
-                    <!-- <i class="fas fa-bars fa-2x"></i> -->
+                <!--hamburger btn-->
+                <div class="menu-btn-container">
+                    <input type="checkbox" id="toggle" class="menu-chkbox">
+                    <label for="toggle" class="menu-btn"></label>
                 </div>
+
+
+                <!-- <div class="menu-btn">
+                    <div class="menu-bar"></div>
+                    <div class="menu-bar"></div>
+                    <div class="menu-bar"></div>
+                </div> -->
             </nav>
         </div>
         <!--container-->
     </header>
-    <div class="mask"></div>
+    <!-- <div class="mask"></div> -->
