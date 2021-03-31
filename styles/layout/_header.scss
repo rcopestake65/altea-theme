@@ -7,6 +7,19 @@ header {
   padding: 15px;
 }
 
+/*hide the strapline in header.php on the home page*/
+
+.home .strapline {
+  display: none;
+}
+.strapline {
+  padding: 4em 0 0 1em;
+}
+.strapline h2 {
+  font-size: 1.25rem;
+  color: $white;
+}
+
 /*hero images - the caption position is altered from Metasliders own css*/
 .hero {
   position: relative;
@@ -49,4 +62,36 @@ header {
 }
 .design .hero h2 {
   color: $white;
+}
+/*///////////static hero image for pages other than Home\\\\\\\\\\\\\\\\\\\*/
+
+.static-hero-wrapper {
+  position: relative;
+}
+.static-hero-wrapper .fa-chevron-down {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.static-hero-container {
+  min-height: 400px;
+}
+.design .fa-chevron-down {
+  color: $copper;
+  &:hover {
+    color: $copper-hover;
+  }
+}
+.assets .fa-chevron-down {
+  color: $gunmetal;
+  &:hover {
+    color: $gunmetal-hover;
+  }
+}
+.finance .fa-chevron-down {
+  color: $teal;
+  &:hover {
+    color: $teal-hover;
+  }
 }

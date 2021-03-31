@@ -4,6 +4,9 @@
 /*
 //////////////////////////////BODY\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: $font-stack;
   background: $white;

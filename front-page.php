@@ -11,7 +11,6 @@ if( have_posts() ) :
 
     <?php the_content(); ?>
 
-
 </section>
 
 <?php endwhile;

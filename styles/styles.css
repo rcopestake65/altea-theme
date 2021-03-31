@@ -179,6 +179,10 @@ h4.biog-link a:hover {
 /*
 //////////////////////////////BODY\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   background: white;
@@ -227,6 +231,20 @@ header {
   padding: 15px;
 }
 
+/*hide the strapline in header.php on the home page*/
+.home .strapline {
+  display: none;
+}
+
+.strapline {
+  padding: 4em 0 0 1em;
+}
+
+.strapline h2 {
+  font-size: 1.25rem;
+  color: white;
+}
+
 /*hero images - the caption position is altered from Metasliders own css*/
 .hero {
   position: relative;
@@ -273,13 +291,49 @@ header {
   color: white;
 }
 
+/*///////////static hero image for pages other than Home\\\\\\\\\\\\\\\\\\\*/
+.static-hero-wrapper {
+  position: relative;
+}
+
+.static-hero-wrapper .fa-chevron-down {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.static-hero-container {
+  min-height: 400px;
+}
+
+.design .fa-chevron-down {
+  color: #e44c10;
+}
+.design .fa-chevron-down:hover {
+  color: rgba(228, 76, 16, 0.8);
+}
+
+.assets .fa-chevron-down {
+  color: #767171;
+}
+.assets .fa-chevron-down:hover {
+  color: rgba(118, 113, 113, 0.8);
+}
+
+.finance .fa-chevron-down {
+  color: #1b616b;
+}
+.finance .fa-chevron-down:hover {
+  color: rgba(27, 97, 107, 0.8);
+}
+
 /*
 ///////////////////////////NAVIGATION\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 [aria-current]:not([aria-current=false]) {
@@ -420,14 +474,6 @@ input.menu-chkbox {
 /*Footer menu*/
 /*mask*/
 /*
-///////////////////////////HERO\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-*/
-.hero-image {
-  display: grid;
-  place-items: center;
-}
-
-/*
 ///////////////////////////FOOTER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
 footer {
@@ -506,6 +552,24 @@ footer .footer-social-menu {
 
 .footer-social-menu a:hover {
   color: #e44c10;
+}
+
+.slider-container {
+  position: relative;
+}
+
+/*positioning of down chevron*/
+.icon-down {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.icon-down a {
+  color: #e44c10;
+}
+.icon-down a:hover {
+  color: rgba(228, 76, 16, 0.8);
 }
 
 /*////////////////////////HOME PAGE\\\\\\\\\\\\\\\\\\\\\*/

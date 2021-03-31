@@ -31,7 +31,9 @@ if ( $image_attributes ) : ?>
                         <?php endif; ?>
 
                     </a></div>
-
+                <div class="strapline">
+                    <h2>For those who want fresh thinking secured by experience</h2>
+                </div>
 
                 <?php
 wp_nav_menu( array( 
@@ -51,7 +53,10 @@ wp_nav_menu( array(
                     <div class="menu-bar"></div>
                 </div> -->
             </nav>
+
         </div>
+
+
         <!--container-->
     </header>
     <!-- <div class="mask"></div> -->
