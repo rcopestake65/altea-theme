@@ -107,6 +107,10 @@ select {
   margin-top: 1em !important;
 }
 
+.mt2 {
+  margin-top: 2em !important;
+}
+
 .pt1 {
   padding-top: 1em !important;
 }
@@ -176,6 +180,12 @@ h4.biog-link a:hover {
   color: white;
 }
 
+blockquote {
+  color: white;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
 /*
 //////////////////////////////BODY\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
@@ -232,19 +242,41 @@ header {
 }
 
 /*hide the strapline in header.php on the home page*/
-.home .strapline {
+.home .strapline-large-screen {
   display: none;
 }
 
-.strapline {
-  padding: 4em 0 0 1em;
+/*show hide straplines depending on screen size*/
+.strapline-large-screen {
+  display: none;
 }
 
-.strapline h2 {
-  font-size: 1.25rem;
-  color: white;
+.strapline-medium-screen {
+  display: none;
 }
 
+@media (min-width: 1000px) {
+  .strapline-large-screen {
+    display: block;
+    padding: 4em 0 0 1em;
+  }
+
+  .strapline-large-screen h2 {
+    font-size: 1.25rem;
+    color: white;
+  }
+}
+@media (max-width: 999px) {
+  .strapline-medium-screen {
+    display: block;
+  }
+
+  .strapline-medium-screen h2 {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    color: white;
+  }
+}
 /*hero images - the caption position is altered from Metasliders own css*/
 .hero {
   position: relative;
@@ -292,19 +324,38 @@ header {
 }
 
 /*///////////static hero image for pages other than Home\\\\\\\\\\\\\\\\\\\*/
-.static-hero-wrapper {
+/*two versions in page.php for large and small screens*/
+.static-hero-container {
+  min-height: 400px;
+}
+
+.static-hero-wrapper-large-screens,
+.static-hero-wrapper-small-screens {
   position: relative;
 }
 
-.static-hero-wrapper .fa-chevron-down {
+.static-hero-wrapper-small-screens {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .static-hero-wrapper-small-screens {
+    display: block;
+  }
+
+  .static-hero-wrapper-large-screens {
+    display: none;
+  }
+
+  .static-hero-container {
+    min-height: auto;
+  }
+}
+.static-hero-wrapper-large-screens .fa-chevron-down {
   position: absolute;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.static-hero-container {
-  min-height: 400px;
 }
 
 .design .fa-chevron-down {
@@ -420,7 +471,7 @@ input.menu-chkbox {
   position: absolute;
   top: 100px;
   right: 10%;
-  width: 25%;
+  width: 30%;
   height: 100%;
   opacity: 0;
 }

@@ -31,8 +31,8 @@ if ( $image_attributes ) : ?>
                         <?php endif; ?>
 
                     </a></div>
-                <div class="strapline">
-                    <h2>For those who want fresh thinking secured by experience</h2>
+                <div class="strapline-large-screen">
+                    <h2>Specialising in business jets, regional aircraft and helicopters.</h2>
                 </div>
 
                 <?php
@@ -53,7 +53,9 @@ wp_nav_menu( array(
                     <div class="menu-bar"></div>
                 </div> -->
             </nav>
-
+            <div class="strapline-medium-screen">
+                <h2>Specialising in business jets, regional aircraft and helicopters.</h2>
+            </div>
         </div>
 
 
