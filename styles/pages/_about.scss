@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+//background colors of biog link boxes
+.gunmetal {
+    background-color: $gunmetal;
+    cursor: pointer;
+    &:hover {
+        background-color: $gunmetal-hover;
+    }
+}
+.blackcurrant {
+    background-color: $blackcurrant;
+    &:hover {
+        background-color: $blackcurrant-hover;
+    }
+}
+.copper {
+    background-color: $copper;
+    &:hover {
+        background-color: $copper-hover;
+    }
+}
+.teal {
+    background-color: $teal;
+    &:hover {
+        background-color: $teal-hover;
+    }
+}
+.biog-links {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.biog-links a {
+    color: $white;
+    &:hover {
+        color: $white-hover;
+    }
+}

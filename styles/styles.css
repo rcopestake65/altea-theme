@@ -215,6 +215,7 @@ body {
 @media (max-width: 500px) {
   .container {
     width: 95%;
+    padding: 0 10px;
   }
 
   .wp-block-getwid-section__wrapper {
@@ -693,6 +694,47 @@ footer .footer-social-menu {
     padding: 10px;
   }
 }
+.gunmetal {
+  background-color: #767171;
+  cursor: pointer;
+}
+.gunmetal:hover {
+  background-color: rgba(118, 113, 113, 0.8);
+}
+
+.blackcurrant {
+  background-color: #201a28;
+}
+.blackcurrant:hover {
+  background-color: rgba(32, 26, 40, 0.8);
+}
+
+.copper {
+  background-color: #e44c10;
+}
+.copper:hover {
+  background-color: rgba(228, 76, 16, 0.8);
+}
+
+.teal {
+  background-color: #1b616b;
+}
+.teal:hover {
+  background-color: rgba(27, 97, 107, 0.8);
+}
+
+.biog-links {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.biog-links a {
+  color: white;
+}
+.biog-links a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .assets-container .container {
   padding-top: 2em;
 }
