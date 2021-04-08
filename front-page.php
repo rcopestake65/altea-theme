@@ -9,6 +9,7 @@ if( have_posts() ) :
 <section class="home">
 
 
+
     <?php the_content(); ?>
 
 </section>
