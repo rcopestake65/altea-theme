@@ -128,6 +128,7 @@ select {
 */
 p {
   margin-bottom: 1rem;
+  color: #201a28;
 }
 
 a {
@@ -196,7 +197,7 @@ html {
 body {
   font-family: "Source Sans Pro", sans-serif;
   background: white;
-  color: #282828;
+  color: #201a28;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -234,6 +235,12 @@ body {
   z-index: 10;
 }
 
+/*container experiment
+.container-test {
+    width: min(50ch, 100vw - 2rem);
+    margin: 2rem auto;
+}
+*/
 /*
 ///////////////////////////HEADER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
@@ -684,7 +691,8 @@ footer .footer-social-menu {
 }
 
 .strapline-two p {
-  font-size: 1.1rem;
+  font-size: 1.75rem;
+  text-align: center;
 }
 
 @media (max-width: 500px) {
