@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 ///////////////////////////////RESET\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
@@ -173,8 +174,27 @@ h4 {
 h4.biog-link {
   font-size: 1.1rem;
 }
-h4.biog-link a:hover {
+
+.biog-link a::after {
+  padding-left: 3px;
+  content: "→";
+}
+
+.biog-link a {
   color: white;
+}
+
+/*biog links hover on different pages*/
+.assets .biog-link a:hover {
+  color: #e44c10;
+}
+
+.design .biog-link a:hover {
+  color: #201a28;
+}
+
+.finance .biog-link a:hover {
+  color: #e44c10;
 }
 
 .assets h3 {

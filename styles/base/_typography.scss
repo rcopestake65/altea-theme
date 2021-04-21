@@ -43,9 +43,24 @@ h4 {
 }
 h4.biog-link {
   font-size: 1.1rem;
-  a:hover {
-    color: $white;
-  }
+}
+.biog-link a::after {
+  padding-left: 3px;
+  content: "\2192";
+}
+.biog-link a {
+  color: $white;
+}
+/*biog links hover on different pages*/
+
+.assets .biog-link a:hover {
+  color: $copper;
+}
+.design .biog-link a:hover {
+  color: $blackcurrant;
+}
+.finance .biog-link a:hover {
+  color: $copper;
 }
 
 .assets h3 {
