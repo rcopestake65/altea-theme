@@ -957,6 +957,16 @@ textarea {
   background: #ccb404;
 }
 
+/*//////////////FINANCE PAGE\\\\\\\\\\\\\\\\\\\\\*/
+body.finance {
+  background-color: #1b616b;
+}
+
+/*//////////////DESIGN PAGE\\\\\\\\\\\\\\\\\\\\\*/
+body.design {
+  background-color: #e44c10;
+}
+
 /*////////////////BUTTONS\\\\\\\\\\\\\\\\\\\\*/
 .btn-skew {
   clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
