@@ -13,6 +13,47 @@ nav {
   color: $copper;
 }
 
+/*////////////////NEW HAMBURGER MENU ANIMATION WITH CLIPPED SHAPE\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.menu-btn-container {
+  top: 40%;
+  right: -20px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 50px;
+  cursor: pointer;
+}
+
+.menu-btn-container:before,
+.menu-btn-container:after,
+.menu-btn-container div {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 7px;
+  margin: 7px 0;
+  transition: 0.5s;
+  clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.menu-btn-container:hover:before,
+.menu-btn-container:hover:after {
+  background: $copper;
+}
+.menu-btn-container.animate:before {
+  transform: translateY(12px) rotate(135deg);
+  clip-path: none;
+  background: $copper;
+}
+.menu-btn-container.animate:after {
+  transform: translateY(-12px) rotate(-135deg);
+  clip-path: none;
+  background: $copper;
+}
+.menu-btn-container.animate div {
+  transform: scale(0);
+}
+
 // .main-nav ul.menu {
 // }
 
@@ -28,68 +69,68 @@ nav {
 // }
 
 /*//////////////////Hamburger with animation to Close btn\\\\\\\\\\\\\\\\\\\\\\\\\*/
-label.menu-btn {
-  position: absolute;
-  right: 0;
-  background-color: $white;
-  height: 7px;
-  width: 40px;
-  // clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
-  margin-bottom: 4px;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-  &::before,
-  &::after {
-    content: "";
-    height: 7px;
-    width: 40px;
-    background-color: $white;
-    position: absolute;
-    display: block;
-    transition: all 0.6s cubic-bezier(1, 0, 0, 1);
-  }
-  &::before {
-    top: -14px;
-    left: 0;
-    transform-origin: left top;
-    transform: rotateZ(0deg);
-  }
-  &::after {
-    bottom: -14px;
-    left: 0;
-    transform-origin: left bottom;
-    transform: rotateZ(0deg);
-  }
-}
-label.menu-btn:hover {
-  background-color: $copper;
-  &::before {
-    background-color: $copper;
-  }
-  &::after {
-    background-color: $copper;
-  }
-}
-#toggle:checked ~ label::before {
-  background-color: $copper;
-  transform: rotateZ(50deg);
-}
-#toggle:checked ~ label::after {
-  background-color: $copper;
-  transform: rotateZ(-50deg);
-}
-#toggle:checked ~ label {
-  background-color: $blackcurrant;
-}
-#toggle ~ label {
-  transition: all 0.5s cubic-bezier(1, 0, 0, 1);
-}
-input.menu-chkbox {
-  display: none;
-}
-.menu-btn-container {
-  cursor: pointer;
-}
+// label.menu-btn {
+//   position: absolute;
+//   right: 0;
+//   background-color: $white;
+//   height: 7px;
+//   width: 40px;
+//   // clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+//   margin-bottom: 4px;
+//   transition: all 0.2s ease-in-out;
+//   cursor: pointer;
+//   &::before,
+//   &::after {
+//     content: "";
+//     height: 7px;
+//     width: 40px;
+//     background-color: $white;
+//     position: absolute;
+//     display: block;
+//     transition: all 0.6s cubic-bezier(1, 0, 0, 1);
+//   }
+//   &::before {
+//     top: -14px;
+//     left: 0;
+//     transform-origin: left top;
+//     transform: rotateZ(0deg);
+//   }
+//   &::after {
+//     bottom: -14px;
+//     left: 0;
+//     transform-origin: left bottom;
+//     transform: rotateZ(0deg);
+//   }
+// }
+// label.menu-btn:hover {
+//   background-color: $copper;
+//   &::before {
+//     background-color: $copper;
+//   }
+//   &::after {
+//     background-color: $copper;
+//   }
+// }
+// #toggle:checked ~ label::before {
+//   background-color: $copper;
+//   transform: rotateZ(50deg);
+// }
+// #toggle:checked ~ label::after {
+//   background-color: $copper;
+//   transform: rotateZ(-50deg);
+// }
+// #toggle:checked ~ label {
+//   background-color: $blackcurrant;
+// }
+// #toggle ~ label {
+//   transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+// }
+// input.menu-chkbox {
+//   display: none;
+// }
+// .menu-btn-container {
+//   cursor: pointer;
+// }
 /*end of hamburger animation*/
 
 // .menu-close-btn {
@@ -183,26 +224,3 @@ input.menu-chkbox {
   opacity: 1;
   z-index: 200;
 }
-
-/*Footer menu*/
-
-/*mask*/
-// .mask {
-//   z-index: 100;
-//   top: 0;
-//   left: 0;
-//   width: 0;
-//   height: 0;
-//   background-color: $blackcurrant;
-//   opacity: 0;
-//   -webkit-transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
-//   transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
-//   position: fixed;
-// }
-// .mask.is-active {
-//   width: 100%;
-//   height: 100%;
-//   opacity: 0.6;
-//   -webkit-transition: opacity 0.3s;
-//   transition: opacity 0.3s;
-// }

@@ -1,15 +1,22 @@
 //open close mobile menu
 
 document
-  .querySelector(".menu-btn")
+  .querySelector(".menu-btn-container")
   .addEventListener("click", () =>
     document.querySelector(".custom-menu-class").classList.toggle("menu-show")
   );
+
 document
-  .querySelector(".menu-btn")
+  .querySelector(".menu-btn-container")
   .addEventListener("click", () =>
-    document.querySelector(".mask").classList.toggle("is-active")
+    document.querySelector(".menu-btn-container").classList.toggle("animate")
   );
+
+// document
+//   .querySelector(".menu-btn")
+//   .addEventListener("click", () =>
+//     document.querySelector(".mask").classList.toggle("is-active")
+//   );
 // document
 //   .querySelector(".menu-close-btn")
 //   .addEventListener("click", () =>

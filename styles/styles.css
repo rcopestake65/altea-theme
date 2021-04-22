@@ -309,6 +309,54 @@ header {
     color: white;
   }
 }
+/*hero images - the caption position is altered from Metasliders own css*/
+.hero {
+  position: relative;
+}
+
+@media (min-width: 800px) {
+  .hero .metaslider .caption-wrap {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    background: transparent;
+    color: #000;
+    opacity: 1;
+    margin: 0;
+    display: block;
+    width: 50%;
+    line-height: 1.4em;
+  }
+
+  .hero h2 {
+    font-size: 3.25rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+  }
+
+  .hero .metaslider .flexslider .slides p {
+    font-size: 1.25rem;
+    margin-bottom: 0.1rem;
+    font-weight: bold;
+  }
+}
+.hero {
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  .hero .metaslider .caption-wrap {
+    position: relative;
+  }
+}
+.design .hero h2 {
+  color: #000;
+}
+
+.design .hero h2 {
+  color: white;
+}
+
 /*
 ///////////////////////////HEADER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
@@ -368,75 +416,50 @@ nav {
   color: #e44c10;
 }
 
-/*//////////////////Hamburger with animation to Close btn\\\\\\\\\\\\\\\\\\\\\\\\\*/
-label.menu-btn {
-  position: absolute;
-  right: 0;
-  background-color: white;
-  height: 7px;
-  width: 40px;
-  margin-bottom: 4px;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
-label.menu-btn::before, label.menu-btn::after {
-  content: "";
-  height: 7px;
-  width: 40px;
-  background-color: white;
-  position: absolute;
-  display: block;
-  transition: all 0.6s cubic-bezier(1, 0, 0, 1);
-}
-label.menu-btn::before {
-  top: -14px;
-  left: 0;
-  transform-origin: left top;
-  transform: rotateZ(0deg);
-}
-label.menu-btn::after {
-  bottom: -14px;
-  left: 0;
-  transform-origin: left bottom;
-  transform: rotateZ(0deg);
-}
-
-label.menu-btn:hover {
-  background-color: #e44c10;
-}
-label.menu-btn:hover::before {
-  background-color: #e44c10;
-}
-label.menu-btn:hover::after {
-  background-color: #e44c10;
-}
-
-#toggle:checked ~ label::before {
-  background-color: #e44c10;
-  transform: rotateZ(50deg);
-}
-
-#toggle:checked ~ label::after {
-  background-color: #e44c10;
-  transform: rotateZ(-50deg);
-}
-
-#toggle:checked ~ label {
-  background-color: #201a28;
-}
-
-#toggle ~ label {
-  transition: all 0.5s cubic-bezier(1, 0, 0, 1);
-}
-
-input.menu-chkbox {
-  display: none;
-}
-
+/*////////////////NEW HAMBURGER MENU ANIMATION WITH CLIPPED SHAPE\\\\\\\\\\\\\\\\\\\\\\\*/
 .menu-btn-container {
+  top: 40%;
+  right: -20px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 50px;
   cursor: pointer;
 }
 
+.menu-btn-container:before,
+.menu-btn-container:after,
+.menu-btn-container div {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 7px;
+  margin: 7px 0;
+  transition: 0.5s;
+  clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.menu-btn-container:hover:before,
+.menu-btn-container:hover:after {
+  background: #e44c10;
+}
+
+.menu-btn-container.animate:before {
+  transform: translateY(12px) rotate(135deg);
+  clip-path: none;
+  background: #e44c10;
+}
+
+.menu-btn-container.animate:after {
+  transform: translateY(-12px) rotate(-135deg);
+  clip-path: none;
+  background: #e44c10;
+}
+
+.menu-btn-container.animate div {
+  transform: scale(0);
+}
+
+/*//////////////////Hamburger with animation to Close btn\\\\\\\\\\\\\\\\\\\\\\\\\*/
 /*end of hamburger animation*/
 .menu-btn p {
   color: #000;
@@ -499,8 +522,6 @@ input.menu-chkbox {
   z-index: 200;
 }
 
-/*Footer menu*/
-/*mask*/
 /*
 ///////////////////////////FOOTER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
@@ -671,6 +692,92 @@ footer .footer-social-menu {
     padding: 10px;
   }
 }
+/*mobile stylng for ACF content in front-page.php*/
+@media (max-width: 500px) {
+  .desktop-and-tablet {
+    display: none;
+  }
+}
+@media (min-width: 500px) {
+  .mobile-only {
+    display: none;
+  }
+}
+.cta-assets {
+  padding: 10px;
+  color: white;
+}
+.cta-assets p {
+  color: white;
+}
+
+.cta-design {
+  padding: 10px;
+  color: white;
+}
+.cta-design p {
+  color: white;
+}
+
+.cta-finance {
+  padding: 10px;
+  color: white;
+}
+.cta-finance p {
+  color: white;
+}
+
+.mobile-strapline {
+  background-color: #201a28;
+  padding: 10px;
+}
+.mobile-strapline p {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.mobile-content {
+  padding: 10px;
+  text-align: center;
+}
+
+.mobile-help {
+  background-color: #201a28;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.mobile-btns-container {
+  background-color: #201a28;
+  padding: 10px 0 10px 0;
+}
+
+.mobile-btns {
+  clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+  margin-bottom: 0.5em;
+  transition: all 0.1s ease-in;
+  padding: 0 10px 10px 0;
+  color: white;
+  background-color: #201a28;
+}
+.mobile-btns a {
+  width: 80%;
+  padding: 5px 30px 5px 10px;
+  display: block;
+}
+
+.mobile-strapline-two {
+  padding: 10px;
+}
+.mobile-strapline-two p {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 .gunmetal {
   background-color: #767171;
   cursor: pointer;

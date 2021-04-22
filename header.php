@@ -42,8 +42,7 @@ wp_nav_menu( array(
 ?>
                 <!--hamburger btn-->
                 <div class="menu-btn-container">
-                    <input type="checkbox" id="toggle" class="menu-chkbox">
-                    <label for="toggle" class="menu-btn"></label>
+                    <div></div>
                 </div>
 
 

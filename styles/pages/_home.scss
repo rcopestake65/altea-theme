@@ -72,3 +72,83 @@
     padding: 10px;
   }
 }
+
+/*mobile stylng for ACF content in front-page.php*/
+@media (max-width: 500px) {
+  .desktop-and-tablet {
+    display: none;
+  }
+}
+@media (min-width: 500px) {
+  .mobile-only {
+    display: none;
+  }
+}
+.cta-assets {
+  padding: 10px;
+  color: $white;
+  p {
+    color: $white;
+  }
+}
+.cta-design {
+  padding: 10px;
+  color: $white;
+  p {
+    color: $white;
+  }
+}
+.cta-finance {
+  padding: 10px;
+  color: $white;
+  p {
+    color: $white;
+  }
+}
+.mobile-strapline {
+  background-color: $blackcurrant;
+  padding: 10px;
+  p {
+    color: $white;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+.mobile-content {
+  padding: 10px;
+  text-align: center;
+}
+.mobile-help {
+  background-color: $blackcurrant;
+  color: $white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+.mobile-btns-container {
+  background-color: $blackcurrant;
+  padding: 10px 0 10px 0;
+}
+.mobile-btns {
+  clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+  margin-bottom: 0.5em;
+  transition: all 0.1s ease-in;
+  padding: 0 10px 10px 0;
+  color: $white;
+  background-color: $blackcurrant;
+
+  a {
+    width: 80%;
+    padding: 5px 30px 5px 10px;
+    display: block;
+  }
+}
+.mobile-strapline-two {
+  padding: 10px;
+
+  p {
+    color: $white;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
