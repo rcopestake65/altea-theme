@@ -22,13 +22,14 @@ if( have_posts() ) :
             <img src="<?php echo get_field('hero_image'); ?>" alt="">
         </div>
     </div>
+    <div class="container">
 
-    <?php the_content(); ?>
+        <?php the_content(); ?>
 
 
 
-    <?php endwhile; endif; ?>
-
+        <?php endwhile; endif; ?>
+    </div>
 </section>
 
 <?php get_footer();?>

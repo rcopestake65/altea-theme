@@ -124,6 +124,10 @@ select {
   padding-right: 1em !important;
 }
 
+.pl1 {
+  padding-left: 1em !important;
+}
+
 /*
 //////////////////////TYPOGRAPHY\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
@@ -763,6 +767,7 @@ footer .footer-social-menu {
   color: rgba(255, 255, 255, 0.8);
 }
 
+/*biog columns layout*/
 .assets-container .container {
   padding-top: 2em;
 }
@@ -772,6 +777,10 @@ footer .footer-social-menu {
     float: right;
   }
 }
+body.assets {
+  background-color: #767171;
+}
+
 .form-container {
   display: grid;
   grid-template-columns: 1fr;
