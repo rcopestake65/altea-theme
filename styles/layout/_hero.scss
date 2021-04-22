@@ -1,0 +1,66 @@
+@use '../abstracts' as *;
+
+/*
+///////////////////////////HEADER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+/*///////////static hero image for pages other than Home\\\\\\\\\\\\\\\\\\\*/
+/*two versions in page.php for large and small screens*/
+// .static-hero-container {
+//     min-height: 400px;
+// }
+// .static-hero-wrapper-large-screens,
+// .static-hero-wrapper-small-screens {
+//     position: relative;
+// }
+// .static-hero-wrapper-small-screens {
+//     display: none;
+// }
+// @media (max-width: 1000px) {
+//     .static-hero-wrapper-small-screens {
+//         display: block;
+//     }
+//     .static-hero-wrapper-large-screens {
+//         display: none;
+//     }
+//     .static-hero-container {
+//         min-height: auto;
+//     }
+// }
+.hero-wrapper .fa-chevron-circle-down {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home .fa-chevron-circle-down {
+    color: $white;
+    &:hover {
+        color: $copper;
+    }
+}
+.design .fa-chevron-circle-down {
+    color: $white;
+    &:hover {
+        color: $copper;
+    }
+}
+.assets .fa-chevron-circle-down {
+    color: $white;
+    &:hover {
+        color: $gunmetal;
+    }
+}
+.finance .fa-chevron-circle-down {
+    color: $white;
+    &:hover {
+        color: $teal;
+    }
+}
+.contact .fa-chevron-circle-down {
+    color: $white;
+    &:hover {
+        color: $copper;
+    }
+}

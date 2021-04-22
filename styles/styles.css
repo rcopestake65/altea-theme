@@ -309,106 +309,51 @@ header {
     color: white;
   }
 }
-/*hero images - the caption position is altered from Metasliders own css*/
-.hero {
-  position: relative;
-}
-@media (min-width: 800px) {
-  .hero .metaslider .caption-wrap {
-    position: absolute;
-    top: 15%;
-    left: 10%;
-    background: transparent;
-    color: #000;
-    opacity: 1;
-    margin: 0;
-    display: block;
-    width: 50%;
-    line-height: 1.4em;
-  }
-  .hero h2 {
-    font-size: 3.25rem;
-    font-weight: normal;
-    margin-bottom: 2rem;
-  }
-  .hero .metaslider .flexslider .slides p {
-    font-size: 1.25rem;
-    margin-bottom: 0.1rem;
-    font-weight: bold;
-  }
-}
-
-.hero {
-  position: relative;
-}
-@media (max-width: 800px) {
-  .hero .metaslider .caption-wrap {
-    position: relative;
-  }
-}
-
-.design .hero h2 {
-  color: #000;
-}
-
-.design .hero h2 {
-  color: white;
-}
-
+/*
+///////////////////////////HEADER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
 /*///////////static hero image for pages other than Home\\\\\\\\\\\\\\\\\\\*/
 /*two versions in page.php for large and small screens*/
-.static-hero-container {
-  min-height: 400px;
-}
-
-.static-hero-wrapper-large-screens,
-.static-hero-wrapper-small-screens {
-  position: relative;
-}
-
-.static-hero-wrapper-small-screens {
-  display: none;
-}
-
-@media (max-width: 1000px) {
-  .static-hero-wrapper-small-screens {
-    display: block;
-  }
-
-  .static-hero-wrapper-large-screens {
-    display: none;
-  }
-
-  .static-hero-container {
-    min-height: auto;
-  }
-}
-.static-hero-wrapper-large-screens .fa-chevron-down {
+.hero-wrapper .fa-chevron-circle-down {
   position: absolute;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.design .fa-chevron-down {
+.home .fa-chevron-circle-down {
+  color: white;
+}
+.home .fa-chevron-circle-down:hover {
   color: #e44c10;
 }
-.design .fa-chevron-down:hover {
-  color: rgba(228, 76, 16, 0.8);
+
+.design .fa-chevron-circle-down {
+  color: white;
+}
+.design .fa-chevron-circle-down:hover {
+  color: #e44c10;
 }
 
-.assets .fa-chevron-down {
+.assets .fa-chevron-circle-down {
+  color: white;
+}
+.assets .fa-chevron-circle-down:hover {
   color: #767171;
 }
-.assets .fa-chevron-down:hover {
-  color: rgba(118, 113, 113, 0.8);
-}
 
-.finance .fa-chevron-down {
+.finance .fa-chevron-circle-down {
+  color: white;
+}
+.finance .fa-chevron-circle-down:hover {
   color: #1b616b;
 }
-.finance .fa-chevron-down:hover {
-  color: rgba(27, 97, 107, 0.8);
+
+.contact .fa-chevron-circle-down {
+  color: white;
+}
+.contact .fa-chevron-circle-down:hover {
+  color: #e44c10;
 }
 
 /*
