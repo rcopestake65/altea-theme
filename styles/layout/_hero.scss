@@ -32,9 +32,16 @@
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 300ms;
 }
 
 .home .fa-chevron-circle-down {
+    color: $white;
+    &:hover {
+        color: $copper;
+    }
+}
+.about-us .fa-chevron-circle-down {
     color: $white;
     &:hover {
         color: $copper;
@@ -58,7 +65,7 @@
         color: $teal;
     }
 }
-.contact .fa-chevron-circle-down {
+.contact-us .fa-chevron-circle-down {
     color: $white;
     &:hover {
         color: $copper;

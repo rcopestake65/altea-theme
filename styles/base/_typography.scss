@@ -9,7 +9,7 @@ p {
 a {
   color: $blue;
   text-decoration: none;
-  transition: all 0.1s ease-in-out;
+  transition: 300ms;
 }
 
 a:hover {

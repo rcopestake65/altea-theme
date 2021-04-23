@@ -24,21 +24,28 @@ if( have_posts() ) :
         <div>
             <img src="<?php the_field('image_one'); ?>" alt="" />
         </div>
-        <div class="cta-assets">
-            <?php the_field('assets'); ?>
-        </div>
+        <a href="<?php echo get_permalink(323) ?>">
+
+            <div class="cta-assets">
+                <?php the_field('assets'); ?>
+            </div>
+        </a>
         <div>
             <img src="<?php the_field('image_two'); ?>" alt="" />
         </div>
-        <div class="cta-design">
-            <?php the_field('design'); ?>
-        </div>
+        <a href="<?php echo get_permalink(335) ?>">
+            <div class="cta-design">
+                <?php the_field('design'); ?>
+            </div>
+        </a>
         <div>
             <img src="<?php the_field('image_three'); ?>" alt="" />
         </div>
-        <div class="cta-finance">
-            <?php the_field('finance'); ?>
-        </div>
+        <a href="<?php echo get_permalink(366) ?>">
+            <div class="cta-finance">
+                <?php the_field('finance'); ?>
+            </div>
+        </a>
         <div class="mobile-strapline">
             <?php the_field('strapline'); ?>
         </div>

@@ -139,7 +139,7 @@ p {
 a {
   color: #1897e9;
   text-decoration: none;
-  transition: all 0.1s ease-in-out;
+  transition: 300ms;
 }
 
 a:hover {
@@ -367,12 +367,20 @@ header {
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: 300ms;
 }
 
 .home .fa-chevron-circle-down {
   color: white;
 }
 .home .fa-chevron-circle-down:hover {
+  color: #e44c10;
+}
+
+.about-us .fa-chevron-circle-down {
+  color: white;
+}
+.about-us .fa-chevron-circle-down:hover {
   color: #e44c10;
 }
 
@@ -397,10 +405,10 @@ header {
   color: #1b616b;
 }
 
-.contact .fa-chevron-circle-down {
+.contact-us .fa-chevron-circle-down {
   color: white;
 }
-.contact .fa-chevron-circle-down:hover {
+.contact-us .fa-chevron-circle-down:hover {
   color: #e44c10;
 }
 
