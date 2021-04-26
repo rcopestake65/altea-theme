@@ -5,7 +5,7 @@
 */
 
 /*///////////static hero image for pages other than Home\\\\\\\\\\\\\\\\\\\*/
-/*two versions in page.php for large and small screens*/
+
 // .static-hero-container {
 //     min-height: 400px;
 // }
@@ -28,6 +28,13 @@
 //     }
 // }
 .hero-wrapper .fa-chevron-circle-down {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 300ms;
+}
+.home .hero-wrapper .fa-chevron-circle-down {
     position: absolute;
     top: 10%;
     left: 50%;

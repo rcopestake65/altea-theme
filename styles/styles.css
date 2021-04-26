@@ -128,6 +128,21 @@ select {
   padding-left: 1em !important;
 }
 
+/*image zoom effect*/
+.img-zoom {
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.img-zoom img {
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+}
+
+.img-zoom:hover img {
+  transform: scale(1.2);
+}
+
 /*
 //////////////////////TYPOGRAPHY\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
@@ -361,8 +376,15 @@ header {
 ///////////////////////////HEADER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
 /*///////////static hero image for pages other than Home\\\\\\\\\\\\\\\\\\\*/
-/*two versions in page.php for large and small screens*/
 .hero-wrapper .fa-chevron-circle-down {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 300ms;
+}
+
+.home .hero-wrapper .fa-chevron-circle-down {
   position: absolute;
   top: 10%;
   left: 50%;
