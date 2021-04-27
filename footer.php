@@ -6,12 +6,12 @@
             </script> - Altea</p>
         <?php
 wp_nav_menu( array( 
-    'theme_location' => 'footer-menu', 
+    'theme_location' => 'main-menu', 
     'container_class' => 'custom-menu-class' ) ); 
 ?>
-        <ul class="footer-social-menu">
+        <!--    <ul class="footer-social-menu">
             <li><a href="#"><i class="fab fa-linkedin fa-lg"></i></a></li>
-        </ul>
+        </ul>-->
 
     </div>
 </footer>
