@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 ///////////////////////////////RESET\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
@@ -190,13 +189,49 @@ h4 {
   font-family: "Trebuchet MS", sans-serif;
 }
 
-h4.biog-link {
+.assets h4.biog-link {
   font-size: 1.1rem;
+  background-color: #646060;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  margin-top: 5px;
+  transition: 300ms;
+  text-align: center;
 }
 
-.biog-link a::after {
-  padding-left: 3px;
-  content: "→";
+.assets h4.biog-link:hover {
+  background-color: #e44c10;
+}
+
+.design h4.biog-link {
+  font-size: 1.1rem;
+  background-color: rgba(199, 64, 11, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  margin-top: 5px;
+  transition: 300ms;
+  text-align: center;
+}
+
+.design h4.biog-link:hover {
+  background-color: #1b616b;
+}
+
+.finance h4.biog-link {
+  font-size: 1.1rem;
+  background-color: #16535c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  margin-top: 5px;
+  transition: 300ms;
+  text-align: center;
+}
+
+.finance h4.biog-link:hover {
+  background-color: #e44c10;
 }
 
 .biog-link a {
@@ -204,18 +239,6 @@ h4.biog-link {
 }
 
 /*biog links hover on different pages*/
-.assets .biog-link a:hover {
-  color: #e44c10;
-}
-
-.design .biog-link a:hover {
-  color: #201a28;
-}
-
-.finance .biog-link a:hover {
-  color: #e44c10;
-}
-
 .assets h3 {
   color: white;
 }
@@ -224,6 +247,26 @@ blockquote {
   color: white;
   font-size: 1.2rem;
   font-style: italic;
+}
+
+/*strapline call-out*/
+p.callout {
+  background-color: #201a28;
+  color: white;
+  padding: 20px;
+  font-weight: bolder;
+  text-align: center;
+  border-radius: 5px;
+  border-bottom: 3px solid #e44c10;
+}
+
+.design p.callout {
+  border-bottom: 3px solid white;
+}
+
+/*pipe separators used on About*/
+.copper-pipe {
+  color: #e44c10;
 }
 
 /*
@@ -239,6 +282,10 @@ body {
   color: #201a28;
   font-size: 1rem;
   line-height: 1.5;
+}
+
+body.blog {
+  position: relative;
 }
 
 /*
@@ -376,7 +423,7 @@ header {
 ///////////////////////////HEADER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
 /*///////////static hero image for pages other than Home\\\\\\\\\\\\\\\\\\\*/
-.hero-wrapper .fa-chevron-circle-down {
+.hero-wrapper .fa-chevron-down {
   position: absolute;
   top: 3%;
   left: 50%;
@@ -384,7 +431,7 @@ header {
   transition: 300ms;
 }
 
-.home .hero-wrapper .fa-chevron-circle-down {
+.home .hero-wrapper .fa-chevron-down {
   position: absolute;
   top: 10%;
   left: 50%;
@@ -392,45 +439,60 @@ header {
   transition: 300ms;
 }
 
-.home .fa-chevron-circle-down {
+.blog .hero-wrapper .fa-chevron-down {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 300ms;
+}
+
+.home .fa-chevron-down {
+  color: #e44c10;
+}
+.home .fa-chevron-down:hover {
+  color: rgba(228, 76, 16, 0.8);
+}
+
+.blog .fa-chevron-down {
+  color: #e44c10;
+}
+.blog .fa-chevron-down:hover {
+  color: rgba(228, 76, 16, 0.8);
+}
+
+.about-us .fa-chevron-down {
   color: white;
 }
-.home .fa-chevron-circle-down:hover {
+.about-us .fa-chevron-down:hover {
   color: #e44c10;
 }
 
-.about-us .fa-chevron-circle-down {
+.design .fa-chevron-down {
   color: white;
 }
-.about-us .fa-chevron-circle-down:hover {
+.design .fa-chevron-down:hover {
   color: #e44c10;
 }
 
-.design .fa-chevron-circle-down {
+.assets .fa-chevron-down {
   color: white;
 }
-.design .fa-chevron-circle-down:hover {
-  color: #e44c10;
-}
-
-.assets .fa-chevron-circle-down {
-  color: white;
-}
-.assets .fa-chevron-circle-down:hover {
+.assets .fa-chevron-down:hover {
   color: #767171;
 }
 
-.finance .fa-chevron-circle-down {
+.finance .fa-chevron-down {
   color: white;
 }
-.finance .fa-chevron-circle-down:hover {
+.finance .fa-chevron-down:hover {
   color: #1b616b;
 }
 
-.contact-us .fa-chevron-circle-down {
+.contact-us .fa-chevron-down {
   color: white;
 }
-.contact-us .fa-chevron-circle-down:hover {
+.contact-us .fa-chevron-down:hover {
   color: #e44c10;
 }
 
@@ -1048,6 +1110,34 @@ body.finance {
 /*//////////////DESIGN PAGE\\\\\\\\\\\\\\\\\\\\\*/
 body.design {
   background-color: #e44c10;
+}
+
+/*
+///////////////////////////NEWS & INTELLIGENCE ARCHIVE / POSTS PAGE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+.posts-grid {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  margin: 2rem 0;
+}
+
+.grid-item {
+  padding: 10px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+}
+
+.blog h2 {
+  text-transform: uppercase;
+}
+
+.blog h2 a {
+  color: #e44c10;
+}
+
+.blog h2 a:hover {
+  color: #1b616b;
 }
 
 /*////////////////BUTTONS\\\\\\\\\\\\\\\\\\\\*/

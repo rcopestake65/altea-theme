@@ -41,27 +41,64 @@ h4 {
   font-weight: bold;
   font-family: $font-headings;
 }
-h4.biog-link {
+.assets h4.biog-link {
   font-size: 1.1rem;
+  background-color: $gunmetal-darker;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  margin-top: 5px;
+  transition: 300ms;
+  text-align: center;
 }
-.biog-link a::after {
-  padding-left: 3px;
-  content: "\2192";
+.assets h4.biog-link:hover {
+  background-color: $copper;
 }
+.design h4.biog-link {
+  font-size: 1.1rem;
+  background-color: $copper-darker;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  margin-top: 5px;
+  transition: 300ms;
+  text-align: center;
+}
+.design h4.biog-link:hover {
+  background-color: $teal;
+}
+
+.finance h4.biog-link {
+  font-size: 1.1rem;
+  background-color: $teal-darker;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  margin-top: 5px;
+  transition: 300ms;
+  text-align: center;
+}
+.finance h4.biog-link:hover {
+  background-color: $copper;
+}
+// .biog-link a::after {
+//   padding-left: 3px;
+//   content: ">";
+// }
 .biog-link a {
   color: $white;
 }
 /*biog links hover on different pages*/
 
-.assets .biog-link a:hover {
-  color: $copper;
-}
-.design .biog-link a:hover {
-  color: $blackcurrant;
-}
-.finance .biog-link a:hover {
-  color: $copper;
-}
+// .assets .biog-link a:hover {
+//   color: $copper;
+// }
+// .design .biog-link a:hover {
+//   color: $blackcurrant;
+// }
+// .finance .biog-link a:hover {
+//   color: $copper;
+// }
 
 .assets h3 {
   color: $white;
@@ -70,4 +107,22 @@ blockquote {
   color: $white;
   font-size: 1.2rem;
   font-style: italic;
+}
+/*strapline call-out*/
+p.callout {
+  background-color: $blackcurrant;
+  color: $white;
+  padding: 20px;
+  font-weight: bolder;
+  text-align: center;
+  border-radius: 5px;
+  border-bottom: 3px solid $copper;
+}
+.design p.callout {
+  border-bottom: 3px solid $white;
+}
+
+/*pipe separators used on About*/
+.copper-pipe {
+  color: $copper;
 }

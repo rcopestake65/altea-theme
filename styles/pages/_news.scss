@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+/*
+///////////////////////////NEWS & INTELLIGENCE ARCHIVE / POSTS PAGE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+.posts-grid {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    margin: 2rem 0;
+}
+.grid-item {
+    padding: 10px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+}
+.blog h2 {
+    text-transform: uppercase;
+}
+.blog h2 a {
+    color: $copper;
+}
+.blog h2 a:hover {
+    color: $teal;
+}
