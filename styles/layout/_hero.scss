@@ -43,50 +43,69 @@
 }
 .blog .hero-wrapper .fa-chevron-down {
     position: absolute;
-    top: 13%;
+    top: 6%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 300ms;
 }
+/*Chevron pulse animation*/
 
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .home .fa-chevron-down {
     color: $copper;
+    animation: pulse 2s infinite;
     &:hover {
         color: $copper-hover;
     }
 }
 .blog .fa-chevron-down {
     color: $copper;
+    animation: pulse 2s infinite;
     &:hover {
         color: $copper-hover;
     }
 }
 .about-us .fa-chevron-down {
     color: $white;
+    animation: pulse 2s infinite;
     &:hover {
         color: $copper;
     }
 }
 .design .fa-chevron-down {
     color: $white;
+    animation: pulse 2s infinite;
     &:hover {
         color: $copper;
     }
 }
 .assets .fa-chevron-down {
     color: $white;
+    animation: pulse 2s infinite;
     &:hover {
         color: $gunmetal;
     }
 }
 .finance .fa-chevron-down {
     color: $white;
+    animation: pulse 2s infinite;
     &:hover {
         color: $teal;
     }
 }
 .contact-us .fa-chevron-down {
     color: $white;
+    animation: pulse 2s infinite;
     &:hover {
         color: $copper;
     }

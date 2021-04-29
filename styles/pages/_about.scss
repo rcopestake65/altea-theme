@@ -37,4 +37,14 @@
         color: $white-hover;
     }
 }
-/*biog columns layout*/
+.about-us ul {
+    padding-left: 1rem;
+}
+.about-us ul li::before {
+    content: ">";
+    color: $copper;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}

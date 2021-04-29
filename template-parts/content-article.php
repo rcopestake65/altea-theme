@@ -1,5 +1,14 @@
-<div><?php the_date(); ?></div>
-<img src="<?php the_post_thumbnail_url(); ?>" alt="">
-<?php
+<div class="post-container">
+    <h3><?php the_title(); ?></h3>
+    <div><?php the_date(); ?></div>
+
+
+
+    <?php
 the_content();
 ?>
+
+
+
+
+</div>

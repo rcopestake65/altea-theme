@@ -7,7 +7,7 @@
         <?php
 wp_nav_menu( array( 
     'theme_location' => 'main-menu', 
-    'container_class' => 'custom-menu-class' ) ); 
+    'container_class' => 'footer-custom-menu-class' ) ); 
 ?>
         <!--    <ul class="footer-social-menu">
             <li><a href="#"><i class="fab fa-linkedin fa-lg"></i></a></li>

@@ -162,6 +162,8 @@ a:hover {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -198,10 +200,12 @@ h4 {
   margin-top: 5px;
   transition: 300ms;
   text-align: center;
+  border-bottom: 3px solid #646060;
 }
 
 .assets h4.biog-link:hover {
   background-color: #e44c10;
+  border-bottom: 3px solid white;
 }
 
 .design h4.biog-link {
@@ -213,10 +217,12 @@ h4 {
   margin-top: 5px;
   transition: 300ms;
   text-align: center;
+  border-bottom: 3px solid rgba(199, 64, 11, 0.8);
 }
 
 .design h4.biog-link:hover {
   background-color: #1b616b;
+  border-bottom: 3px solid white;
 }
 
 .finance h4.biog-link {
@@ -228,10 +234,12 @@ h4 {
   margin-top: 5px;
   transition: 300ms;
   text-align: center;
+  border-bottom: 3px solid #16535c;
 }
 
 .finance h4.biog-link:hover {
   background-color: #e44c10;
+  border-bottom: 3px solid white;
 }
 
 .biog-link a {
@@ -269,6 +277,10 @@ p.callout {
   color: #e44c10;
 }
 
+.about-us h5 {
+  text-transform: uppercase;
+}
+
 /*
 //////////////////////////////BODY\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
@@ -293,7 +305,7 @@ body.blog {
 */
 .container {
   width: 90%;
-  max-width: 1000px;
+  max-width: 1500px;
   padding: 0;
   margin: 0 auto;
   position: relative;
@@ -327,6 +339,12 @@ body.blog {
     margin: 2rem auto;
 }
 */
+/*flex control of three col layout od Assets, Design & Finance*/
+@media screen and (max-width: 990px) {
+  .flex-control {
+    flex-direction: column;
+  }
+}
 /*
 ///////////////////////////HEADER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
@@ -441,14 +459,27 @@ header {
 
 .blog .hero-wrapper .fa-chevron-down {
   position: absolute;
-  top: 13%;
+  top: 6%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 300ms;
 }
 
+/*Chevron pulse animation*/
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .home .fa-chevron-down {
   color: #e44c10;
+  animation: pulse 2s infinite;
 }
 .home .fa-chevron-down:hover {
   color: rgba(228, 76, 16, 0.8);
@@ -456,6 +487,7 @@ header {
 
 .blog .fa-chevron-down {
   color: #e44c10;
+  animation: pulse 2s infinite;
 }
 .blog .fa-chevron-down:hover {
   color: rgba(228, 76, 16, 0.8);
@@ -463,6 +495,7 @@ header {
 
 .about-us .fa-chevron-down {
   color: white;
+  animation: pulse 2s infinite;
 }
 .about-us .fa-chevron-down:hover {
   color: #e44c10;
@@ -470,6 +503,7 @@ header {
 
 .design .fa-chevron-down {
   color: white;
+  animation: pulse 2s infinite;
 }
 .design .fa-chevron-down:hover {
   color: #e44c10;
@@ -477,6 +511,7 @@ header {
 
 .assets .fa-chevron-down {
   color: white;
+  animation: pulse 2s infinite;
 }
 .assets .fa-chevron-down:hover {
   color: #767171;
@@ -484,6 +519,7 @@ header {
 
 .finance .fa-chevron-down {
   color: white;
+  animation: pulse 2s infinite;
 }
 .finance .fa-chevron-down:hover {
   color: #1b616b;
@@ -491,6 +527,7 @@ header {
 
 .contact-us .fa-chevron-down {
   color: white;
+  animation: pulse 2s infinite;
 }
 .contact-us .fa-chevron-down:hover {
   color: #e44c10;
@@ -626,13 +663,11 @@ footer {
 .footer-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
   width: 90%;
-  max-width: 1000px;
+  max-width: 1500px;
   padding: 10px 0;
   margin: 0 auto;
-  position: relative;
 }
 .footer-container ul,
 .footer-container li {
@@ -644,30 +679,21 @@ footer {
   color: white;
 }
 
-footer .custom-menu-class {
+footer .footer-custom-menu-class {
   display: flex;
   justify-content: space-between;
-  position: relative;
-  text-align: center;
-  top: 0;
-  right: 0;
-  width: auto;
-  height: auto;
-  opacity: 1;
-  transition: none;
-  z-index: 10;
 }
-footer .custom-menu-class ul {
+footer .footer-custom-menu-class ul {
   background-color: transparent;
   padding: 0;
   border: none;
   display: flex;
   justify-content: space-evenly;
 }
-footer .custom-menu-class ul li {
+footer .footer-custom-menu-class ul li {
   padding: 0 10px;
 }
-footer .custom-menu-class a {
+footer .footer-custom-menu-class a {
   padding-bottom: 0;
   font-weight: normal;
   color: white;
@@ -675,10 +701,10 @@ footer .custom-menu-class a {
   font-size: 0.8rem;
   padding-right: 5px;
 }
-footer .custom-menu-class a:hover {
+footer .footer-custom-menu-class a:hover {
   color: #e44c10;
 }
-footer .custom-menu-class li::after {
+footer .footer-custom-menu-class li::after {
   content: "";
   font-size: 1rem;
   color: white;
@@ -696,6 +722,11 @@ footer .footer-social-menu {
   color: #e44c10;
 }
 
+@media (max-width: 600px) {
+  footer .footer-custom-menu-class {
+    display: none;
+  }
+}
 .slider-container {
   position: relative;
 }
@@ -912,7 +943,19 @@ footer .footer-social-menu {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/*biog columns layout*/
+.about-us ul {
+  padding-left: 1rem;
+}
+
+.about-us ul li::before {
+  content: ">";
+  color: #e44c10;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
 .assets-container .container {
   padding-top: 2em;
 }
@@ -1113,7 +1156,7 @@ body.design {
 }
 
 /*
-///////////////////////////NEWS & INTELLIGENCE ARCHIVE / POSTS PAGE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+///////////////////////////NEWS & INTELLIGENCE ARCHIVE POSTS PAGE / & SINGLE NEWS ITEMS (template parts)\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
 .posts-grid {
   display: grid;
@@ -1122,22 +1165,131 @@ body.design {
   margin: 2rem 0;
 }
 
+@media (max-width: 750px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .grid-item {
   padding: 10px;
-  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.24);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid ghostwhite;
 }
 
-.blog h2 {
+.blog h3 {
   text-transform: uppercase;
 }
 
-.blog h2 a {
+.blog h3 a,
+.press-details a {
   color: #e44c10;
 }
 
-.blog h2 a:hover {
+.blog h3 a:hover,
+.press-details a:hover {
   color: #1b616b;
+}
+
+.posts-grid img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.posts-date {
+  color: grey;
+  font-style: italic;
+}
+
+a.read-more {
+  padding: 10px 5px;
+  display: block;
+  background-color: #e44c10;
+  color: white;
+  border-radius: 5px;
+  width: 50%;
+  border-bottom: 3px solid #e44c10;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+a:hover.read-more {
+  background-color: #1b616b;
+  border-bottom: 3px solid #e44c10;
+}
+
+.post-container {
+  margin-top: 2rem;
+}
+
+.archive-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+@media (max-width: 850px) {
+  .archive-container {
+    grid-template-columns: 1fr;
+  }
+
+  .press-details {
+    order: 1;
+  }
+
+  .posts-grid {
+    order: 2;
+  }
+}
+.wp-block-latest-posts a {
+  color: #e44c10;
+}
+
+.wp-block-latest-posts a::after {
+  content: ">";
+  padding-left: 5px;
+}
+
+.wp-block-latest-posts a:hover {
+  color: #1b616b;
+}
+
+.press-details {
+  margin: 2rem 0 2rem 2rem;
+}
+.press-details h4,
+.press-details p {
+  margin: 0;
+}
+
+/*download links*/
+.wp-block-file a {
+  color: #e44c10;
+}
+
+.wp-block-file a:hover {
+  color: #1b616b;
+}
+
+.single .wp-block-file .wp-block-file__button {
+  background-color: #e44c10;
+}
+
+.single .wp-block-file .wp-block-file__button:hover {
+  background-color: #1b616b;
+}
+
+.news-callout {
+  font-size: 1.5rem;
+}
+
+.news-callout h4 {
+  color: #e44c10;
+  font-size: 1rem;
 }
 
 /*////////////////BUTTONS\\\\\\\\\\\\\\\\\\\\*/

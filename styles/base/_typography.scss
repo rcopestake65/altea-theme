@@ -18,6 +18,8 @@ a:hover {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -50,9 +52,11 @@ h4 {
   margin-top: 5px;
   transition: 300ms;
   text-align: center;
+  border-bottom: 3px solid $gunmetal-darker;
 }
 .assets h4.biog-link:hover {
   background-color: $copper;
+  border-bottom: 3px solid $white;
 }
 .design h4.biog-link {
   font-size: 1.1rem;
@@ -63,9 +67,11 @@ h4 {
   margin-top: 5px;
   transition: 300ms;
   text-align: center;
+  border-bottom: 3px solid $copper-darker;
 }
 .design h4.biog-link:hover {
   background-color: $teal;
+  border-bottom: 3px solid $white;
 }
 
 .finance h4.biog-link {
@@ -77,9 +83,11 @@ h4 {
   margin-top: 5px;
   transition: 300ms;
   text-align: center;
+  border-bottom: 3px solid $teal-darker;
 }
 .finance h4.biog-link:hover {
   background-color: $copper;
+  border-bottom: 3px solid $white;
 }
 // .biog-link a::after {
 //   padding-left: 3px;
@@ -125,4 +133,8 @@ p.callout {
 /*pipe separators used on About*/
 .copper-pipe {
   color: $copper;
+}
+
+.about-us h5 {
+  text-transform: uppercase;
 }

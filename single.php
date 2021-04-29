@@ -1,5 +1,7 @@
 <?php get_header();?>
-
+<?php
+echo do_shortcode('[smartslider3 slider="13"]');
+?>
 <?php
 
 if( have_posts() ) :
