@@ -22,7 +22,7 @@
             <h2 class="hidden">Aircraft | inside &amp; out</h2>
 
             <nav>
-                <div class="logo"> <a href="/altea_web_project/" title="home" class="navbar-item">
+                <div class="logo"> <a href="/" title="home" class="navbar-item">
                         <?php
                 $image_attributes = wp_get_attachment_image_src( 378, 'full' );
 if ( $image_attributes ) : ?>

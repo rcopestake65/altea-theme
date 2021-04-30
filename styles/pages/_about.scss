@@ -37,10 +37,10 @@
         color: $white-hover;
     }
 }
-.about-us ul {
+.about-us ul:not(:first-of-type) {
     padding-left: 1rem;
 }
-.about-us ul li::before {
+.about-us ul:not(:first-of-type) li::before {
     content: ">";
     color: $copper;
     font-weight: bold;

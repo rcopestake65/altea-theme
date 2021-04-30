@@ -184,7 +184,8 @@ nav {
   ul {
     background-color: $blackcurrant;
     padding: 10px 0 10px 20px;
-    // border: 1px solid $gray;
+    border: 1px solid $copper-half;
+    border-radius: 5px;
   }
 
   ul li {

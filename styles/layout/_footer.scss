@@ -6,8 +6,12 @@ footer {
   background: $blackcurrant;
   color: $white;
   padding-top: 10px;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
 }
-
+.contact-us footer {
+  margin-top: 0;
+}
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -25,6 +29,12 @@ footer {
   p {
     margin-bottom: 0;
     color: $white;
+  }
+  a {
+    color: $white;
+  }
+  a:hover {
+    color: $copper;
   }
 }
 footer {
@@ -50,6 +60,7 @@ footer {
       transition: none;
       font-size: 0.8rem;
       padding-right: 5px;
+      transition: 200ms;
     }
     a:hover {
       color: $copper;
@@ -76,4 +87,17 @@ footer .footer-social-menu {
   footer .footer-custom-menu-class {
     display: none;
   }
+}
+
+/*social icons*/
+.footer-social-icons {
+  display: none;
+}
+.social-icon {
+  color: $teal;
+  margin-right: 5px;
+  transition: 200ms;
+}
+.social-icon:hover {
+  color: $copper;
 }

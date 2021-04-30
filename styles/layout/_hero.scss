@@ -29,7 +29,7 @@
 // }
 .hero-wrapper .fa-chevron-down {
     position: absolute;
-    top: 3%;
+    top: 40px;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 300ms;
@@ -41,13 +41,13 @@
     transform: translate(-50%, -50%);
     transition: 300ms;
 }
-.blog .hero-wrapper .fa-chevron-down {
-    position: absolute;
-    top: 6%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 300ms;
-}
+// .blog .hero-wrapper .fa-chevron-down {
+//     position: absolute;
+//     top: 8%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     transition: 300ms;
+// }
 /*Chevron pulse animation*/
 
 @keyframes pulse {
