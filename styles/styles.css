@@ -1167,6 +1167,11 @@ textarea {
   background: #ccb404;
 }
 
+.map {
+  display: flex;
+  justify-content: center;
+}
+
 /*//////////////FINANCE PAGE\\\\\\\\\\\\\\\\\\\\\*/
 body.finance {
   background-color: #1b616b;
