@@ -1347,6 +1347,29 @@ a:hover.read-more {
   border-bottom: 3px solid #1b616b;
 }
 
+/*/////////////////////////////404\\\\\\\\\\\\\\\\\\\\\\\\\*/
+.error-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10rem;
+}
+
+.error-content h2,
+.error-content h3 {
+  text-align: center;
+}
+
+.error-content h2 {
+  font-size: clamp(1rem, calc(1rem + ((1vw - 0.32rem) * 3.125)), 4rem);
+}
+
+.error-content h3 {
+  font-size: clamp(1rem, calc(1rem + ((1vw - 0.32rem) * 1.0417)), 2rem);
+  margin-top: 2rem;
+}
+
 /*////////////////BUTTONS\\\\\\\\\\\\\\\\\\\\*/
 .btn-skew {
   clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
