@@ -1432,5 +1432,56 @@ a:hover.read-more {
 }
 
 /*//////////////////////LOGO\\\\\\\\\\\\\\\\\\\\\\\*/
+.case-study-row {
+  margin-top: 5rem;
+}
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.case-studies-item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid ghostwhite;
+  -webkit-box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.24);
+}
+
+.case-studies-item h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+  background: #e44c10;
+  padding: 5px;
+  color: white;
+  margin-bottom: 1px;
+}
+
+.case-studies-item a.download {
+  margin-top: auto;
+  color: white;
+  padding: 5px 10px;
+  border-right: 15px solid #e44c10;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  align-items: center;
+}
+
+.case-studies-item p {
+  margin-top: 1rem;
+}
+
+.case-studies-item .pdf-color {
+  color: #e44c10;
+}
+
+.case-studies-item .img-zoom {
+  margin: 0;
+}
 
 /*# sourceMappingURL=styles.css.map */

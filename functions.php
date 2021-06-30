@@ -3,7 +3,7 @@ function load_stylesheets()
 {
 
     
-    wp_register_style('styles', get_template_directory_uri() . '/styles/styles.css', array(), false, 'all');
+    wp_register_style('styles', get_template_directory_uri() . '/styles/styles.css?v=001', array(), false, 'all');
     wp_enqueue_style('styles');
 
     wp_register_style( 'font_awesome', 'https://use.fontawesome.com/releases/v5.7.2/css/all.css' );
