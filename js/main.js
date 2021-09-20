@@ -58,22 +58,22 @@ form.addEventListener("submit", (e) => {
 function sendForm() {
   if (nameField && emailField && messageField) {
     //AJAX ZAPIER
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var body = $("#body").val();
+    var name = jQuery("#name").val();
+    var email = jQuery("#email").val();
+    var body = jQuery("#body").val();
     var data = {
       email: email,
       message: body,
       contact: name,
     };
 
-    $.ajax({
+    jQuery.ajax({
       url: "https://hooks.zapier.com/hooks/catch/8553878/owf4qxv/",
       type: "post",
       data: JSON.stringify(data),
       success: function () {
-        $(".thanks-message").addClass("thanks-message-show");
-        $(".form-item").hide();
+        jQuery(".thanks-message").addClass("thanks-message-show");
+        jQuery(".form-item").hide();
       },
     });
   }
@@ -130,7 +130,7 @@ function setSuccessFor(input) {
   formControl.className = "form-control success";
 }
 function isEmail(email) {
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))jQuery/.test(
     email
   );
 }
