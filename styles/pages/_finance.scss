@@ -1,7 +1,8 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 /*//////////////FINANCE PAGE\\\\\\\\\\\\\\\\\\\\\*/
 
-body.finance {
+body.finance,
+body.finance-acf {
     background-color: $teal;
 }

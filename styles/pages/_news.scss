@@ -1,4 +1,4 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 /*
 ///////////////////////////NEWS & INTELLIGENCE ARCHIVE POSTS PAGE / & SINGLE NEWS ITEMS (template parts)\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
@@ -138,4 +138,19 @@ a:hover.read-more {
 .nav-next a:hover {
     background-color: $copper;
     border-bottom: 3px solid $teal;
+}
+/*ACF Controlled News single page - see template-parts/content-article for html*/
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+.news-grid a:hover {
+    color: $copper;
+}
+@media (max-width: 900px) {
+    .news-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }

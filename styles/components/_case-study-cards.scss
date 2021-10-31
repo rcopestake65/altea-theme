@@ -1,4 +1,4 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 //////////////////////*Case Study Cards*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 .case-study-row {
     margin-top: 5rem;
@@ -16,6 +16,9 @@
     -webkit-box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.24);
     box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.24);
 }
+// .case-studies-item p:first-of-type {
+//     display: none;
+// }
 .case-studies-item h3 {
     font-size: 1rem;
     font-weight: normal;
@@ -25,16 +28,21 @@
     color: $white;
     margin-bottom: 1px;
 }
-.case-studies-item a.download {
+.case-studies-item .download {
     margin-top: auto;
     color: $white;
     padding: 5px 10px;
     border-right: 15px solid $copper;
+}
+.case-studies-item .download a {
+    color: white;
+    /* text-align: right; */
+    /* padding-left: 2em; */
     display: flex;
     justify-content: space-between;
-    align-content: flex-end;
     align-items: center;
 }
+
 .case-studies-item p {
     margin-top: 1rem;
 }

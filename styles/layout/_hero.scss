@@ -1,4 +1,4 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 /*
 ///////////////////////////HEADER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -29,14 +29,14 @@
 // }
 .hero-wrapper .fa-chevron-down {
     position: absolute;
-    top: 40px;
+    top: 21%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 300ms;
 }
 .home .hero-wrapper .fa-chevron-down {
     position: absolute;
-    top: 10%;
+    top: 115%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 300ms;

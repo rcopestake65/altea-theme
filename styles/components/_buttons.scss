@@ -1,4 +1,4 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 /*////////////////BUTTONS\\\\\\\\\\\\\\\\\\\\*/
 .btn-skew {
     clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
@@ -13,14 +13,50 @@
         transition: 0.3s;
     }
 }
-.copper {
-    .wp-block-button__link {
-        background-color: $copper;
-        &:hover {
-            background-color: $copper-hover;
-        }
+/*used on ACF site*/
+.btn-skewed {
+    clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+    margin-bottom: 0.5em;
+    transition: all 0.1s ease-in;
+    padding: 5px;
+    color: $white;
+    text-align: left;
+    padding: 3px 10px;
+    transition: 0.3s;
+    display: inline-block;
+    width: 100%;
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    &:hover {
+        transform: scale(1.02);
     }
 }
+.btn-skewed.copper {
+    background-color: $copper;
+    color: $white;
+    &:hover {
+        transform: scale(1.02);
+        background-color: $copper-hover;
+    }
+}
+.btn-skewed.white {
+    background-color: $white;
+    color: $blue;
+    &:hover {
+        transform: scale(1.02);
+        background-color: $white-hover;
+    }
+}
+// .copper {
+//     .wp-block-button__link {
+//         background-color: $copper;
+//         &:hover {
+//             background-color: $copper-hover;
+//         }
+//     }
+// }
 
 .gunmetal {
     .wp-block-button__link {

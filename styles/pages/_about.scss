@@ -1,4 +1,4 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 //background colors of biog link boxes
 .gunmetal {
@@ -47,4 +47,11 @@
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+}
+.associates {
+    border-top: 1px solid $copper;
+    padding-top: 2em;
+}
+.associates h5 {
+    text-transform: uppercase;
 }

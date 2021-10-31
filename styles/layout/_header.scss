@@ -1,4 +1,4 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 /*
 ///////////////////////////HEADER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
@@ -9,7 +9,8 @@ header {
 
 /*hide the strapline in header.php on the home page*/
 
-.home .strapline-large-screen {
+.home .strapline-large-screen,
+.home-acf .strapline-large-screen /*remove after acf build*/ {
   display: none;
 }
 
@@ -81,4 +82,10 @@ header {
 }
 .design .hero h2 {
   color: white;
+}
+
+.header-bg,
+.header-btns-bg {
+  background-color: $blackcurrant;
+  padding: 1em 0;
 }

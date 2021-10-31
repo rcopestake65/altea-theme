@@ -1,10 +1,13 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 /*
 //////////////////////TYPOGRAPHY\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
 p {
   margin-bottom: 1rem;
   color: $blackcurrant;
+}
+p:empty {
+  display: none;
 }
 a {
   color: $blue;
@@ -43,6 +46,28 @@ h4 {
   font-weight: bold;
   font-family: $font-headings;
 }
+h4#team {
+  color: $copper;
+}
+.cta-assets a,
+.cta-design a,
+.cta-finance a {
+  color: $white;
+}
+.cta-assets a:hover,
+.cta-design a:hover,
+.cta-finance a:hover {
+  color: $white;
+}
+.team-member a {
+  color: $copper;
+}
+.team-member a:hover {
+  color: $copper;
+}
+.assets h4 {
+  color: $white;
+}
 .assets h4.biog-link {
   font-size: 1.1rem;
   background-color: $gunmetal-darker;
@@ -53,11 +78,25 @@ h4 {
   transition: 300ms;
   text-align: center;
   border-bottom: 3px solid $gunmetal-darker;
+  width: 100%;
 }
 .assets h4.biog-link:hover {
   background-color: $copper;
   border-bottom: 3px solid $white;
 }
+.finance h3,
+.finance h4,
+.finance p,
+.design h3,
+.design h4 {
+  color: $white;
+}
+.assets h4:last-of-type,
+.design h4:last-of-type,
+.finance h4:last-of-type {
+  padding: 1em 0;
+}
+
 .design h4.biog-link {
   font-size: 1.1rem;
   background-color: $copper-darker;
@@ -73,7 +112,9 @@ h4 {
   background-color: $teal;
   border-bottom: 3px solid $white;
 }
-
+.assets h4.biog-link + p {
+  color: $white;
+}
 .finance h4.biog-link {
   font-size: 1.1rem;
   background-color: $teal-darker;

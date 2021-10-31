@@ -111,6 +111,10 @@ select {
   margin-top: 2em !important;
 }
 
+.mr1 {
+  margin-right: 1em;
+}
+
 .pt1 {
   padding-top: 1em !important;
 }
@@ -148,6 +152,10 @@ select {
 p {
   margin-bottom: 1rem;
   color: #201a28;
+}
+
+p:empty {
+  display: none;
 }
 
 a {
@@ -191,6 +199,34 @@ h4 {
   font-family: "Trebuchet MS", sans-serif;
 }
 
+h4#team {
+  color: #e44c10;
+}
+
+.cta-assets a,
+.cta-design a,
+.cta-finance a {
+  color: white;
+}
+
+.cta-assets a:hover,
+.cta-design a:hover,
+.cta-finance a:hover {
+  color: white;
+}
+
+.team-member a {
+  color: #e44c10;
+}
+
+.team-member a:hover {
+  color: #e44c10;
+}
+
+.assets h4 {
+  color: white;
+}
+
 .assets h4.biog-link {
   font-size: 1.1rem;
   background-color: #646060;
@@ -201,11 +237,26 @@ h4 {
   transition: 300ms;
   text-align: center;
   border-bottom: 3px solid #646060;
+  width: 100%;
 }
 
 .assets h4.biog-link:hover {
   background-color: #e44c10;
   border-bottom: 3px solid white;
+}
+
+.finance h3,
+.finance h4,
+.finance p,
+.design h3,
+.design h4 {
+  color: white;
+}
+
+.assets h4:last-of-type,
+.design h4:last-of-type,
+.finance h4:last-of-type {
+  padding: 1em 0;
 }
 
 .design h4.biog-link {
@@ -223,6 +274,10 @@ h4 {
 .design h4.biog-link:hover {
   background-color: #1b616b;
   border-bottom: 3px solid white;
+}
+
+.assets h4.biog-link + p {
+  color: white;
 }
 
 .finance h4.biog-link {
@@ -311,6 +366,12 @@ body.blog {
   position: relative;
 }
 
+.assets-container .container,
+.design-container .container,
+.finance-container .container {
+  padding-top: 2em;
+}
+
 @media (max-width: 500px) {
   .container {
     width: 95%;
@@ -326,6 +387,16 @@ body.blog {
   margin: auto;
   position: -webkit-sticky;
   position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 0;
+  z-index: 10;
+}
+
+.container-full-width-unsticky {
+  width: 100%;
+  margin: auto;
   top: 0;
   left: 0;
   background-color: #fff;
@@ -354,7 +425,8 @@ header {
 }
 
 /*hide the strapline in header.php on the home page*/
-.home .strapline-large-screen {
+.home .strapline-large-screen,
+.home-acf .strapline-large-screen {
   display: none;
 }
 
@@ -437,13 +509,19 @@ header {
   color: white;
 }
 
+.header-bg,
+.header-btns-bg {
+  background-color: #201a28;
+  padding: 1em 0;
+}
+
 /*
 ///////////////////////////HEADER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
 /*///////////static hero image for pages other than Home\\\\\\\\\\\\\\\\\\\*/
 .hero-wrapper .fa-chevron-down {
   position: absolute;
-  top: 40px;
+  top: 21%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 300ms;
@@ -451,7 +529,7 @@ header {
 
 .home .hero-wrapper .fa-chevron-down {
   position: absolute;
-  top: 10%;
+  top: 115%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 300ms;
@@ -808,9 +886,9 @@ footer .footer-social-menu {
 }
 
 /*overwriting the kadence info box disply settings to spread out the h2 and p at the top and bottom of the container*/
-.home .cta-assets .kt-infobox-textcontent,
-.home .cta-design .kt-infobox-textcontent,
-.home .cta-finance .kt-infobox-textcontent {
+.cta-assets,
+.cta-design,
+.cta-finance {
   display: flex;
   flex-direction: column;
   min-height: 120px;
@@ -821,21 +899,26 @@ footer .footer-social-menu {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.cta-strapline p {
   font-size: 1.1rem;
+  color: white;
+}
+
+.strapline-two {
+  font-size: 1.75rem;
+  padding: 0.5em 2em;
+  color: white;
 }
 
 .strapline-two p {
   font-size: 1.75rem;
-  text-align: center;
+  padding: 0.5em 2em;
+  color: white;
 }
 
 @media (max-width: 500px) {
   .cta-strapline,
 .strapline-two p {
-    margin-top: 10px;
-    padding: 10px;
+    display: none;
   }
 }
 /*mobile stylng for ACF content in front-page.php*/
@@ -849,8 +932,13 @@ footer .footer-social-menu {
     display: none;
   }
 }
+.cta,
+.cta:hover {
+  color: white;
+}
+
 .cta-assets {
-  padding: 10px;
+  padding: 15px;
   color: white;
 }
 .cta-assets p {
@@ -858,7 +946,7 @@ footer .footer-social-menu {
 }
 
 .cta-design {
-  padding: 10px;
+  padding: 15px;
   color: white;
 }
 .cta-design p {
@@ -866,7 +954,7 @@ footer .footer-social-menu {
 }
 
 .cta-finance {
-  padding: 10px;
+  padding: 15px;
   color: white;
 }
 .cta-finance p {
@@ -978,8 +1066,13 @@ footer .footer-social-menu {
   margin-left: -1em;
 }
 
-.assets-container .container {
+.associates {
+  border-top: 1px solid #e44c10;
   padding-top: 2em;
+}
+
+.associates h5 {
+  text-transform: uppercase;
 }
 
 @media (min-width: 800px) {
@@ -1173,7 +1266,8 @@ textarea {
 }
 
 /*//////////////FINANCE PAGE\\\\\\\\\\\\\\\\\\\\\*/
-body.finance {
+body.finance,
+body.finance-acf {
   background-color: #1b616b;
 }
 
@@ -1347,6 +1441,23 @@ a:hover.read-more {
   border-bottom: 3px solid #1b616b;
 }
 
+/*ACF Controlled News single page - see template-parts/content-article for html*/
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.news-grid a:hover {
+  color: #e44c10;
+}
+
+@media (max-width: 900px) {
+  .news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 /*/////////////////////////////404\\\\\\\\\\\\\\\\\\\\\\\\\*/
 .error-container {
   height: 100vh;
@@ -1385,11 +1496,43 @@ a:hover.read-more {
   transition: 0.3s;
 }
 
-.copper .wp-block-button__link {
-  background-color: #e44c10;
+/*used on ACF site*/
+.btn-skewed {
+  clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+  margin-bottom: 0.5em;
+  transition: all 0.1s ease-in;
+  padding: 5px;
+  color: white;
+  text-align: left;
+  padding: 3px 10px;
+  transition: 0.3s;
+  display: inline-block;
+  width: 100%;
 }
-.copper .wp-block-button__link:hover {
+.btn-skewed p {
+  margin: 0;
+  padding: 0;
+}
+.btn-skewed:hover {
+  transform: scale(1.02);
+}
+
+.btn-skewed.copper {
+  background-color: #e44c10;
+  color: white;
+}
+.btn-skewed.copper:hover {
+  transform: scale(1.02);
   background-color: rgba(228, 76, 16, 0.8);
+}
+
+.btn-skewed.white {
+  background-color: white;
+  color: #1897e9;
+}
+.btn-skewed.white:hover {
+  transform: scale(1.02);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .gunmetal .wp-block-button__link {
@@ -1461,14 +1604,19 @@ a:hover.read-more {
   margin-bottom: 1px;
 }
 
-.case-studies-item a.download {
+.case-studies-item .download {
   margin-top: auto;
   color: white;
   padding: 5px 10px;
   border-right: 15px solid #e44c10;
+}
+
+.case-studies-item .download a {
+  color: white;
+  /* text-align: right; */
+  /* padding-left: 2em; */
   display: flex;
   justify-content: space-between;
-  align-content: flex-end;
   align-items: center;
 }
 

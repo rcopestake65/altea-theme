@@ -5,9 +5,7 @@ get_header();
     <?php
 echo do_shortcode('[smartslider3 slider="13"]');
 ?>
-    <div class="hero-wrapper">
-        <a href="#main-content"><i class="fas fa-chevron-down fa-5x"></i></a>
-    </div>
+
     <article>
         <div class="archive-container">
             <div class="posts-grid" id="main-content">
@@ -25,13 +23,14 @@ if( have_posts() ){
                     <?php the_post(); ?>
 
 
-                    <a class="img-zoom" href=" <?php the_permalink(); ?>"> <?php  if ( has_post_thumbnail() ) {
-    the_post_thumbnail();
-}   ?></a>
+                    <a class="img-zoom" href="<?php the_permalink(); ?>">
+                        <img src="<?php the_field('image'); ?>" /></a>
 
-                    <h3><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h3>
+                    <h3><a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></h3>
                     <h4 class="posts-date"><?php the_date(); ?></h4>
-                    <?php the_excerpt(); ?>
+                    <?php the_field('excerpt'); ?>
+                    <a href="<?php the_permalink(); ?>" class="read-more">Read more </a>
+
                 </div>
 
 
